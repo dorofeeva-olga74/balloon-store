@@ -1,0 +1,25 @@
+.catalog-btn {
+    width: 154px;
+    height: 49px;
+    margin: 0;
+    padding: 14px 30px 15px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #F188F2;
+    border-radius: 5px;
+    font-family: 'Inter', 'Arial', sans-serif;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19.5px; 
+    border: none;
+    cursor: pointer;   
+/* Montserrat */
+}
+
+.catalog-btn:hover{
+    opacity: 0.8;
+}

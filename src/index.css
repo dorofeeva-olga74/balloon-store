@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.page__section_xl-wide {
+  max-width: 1280px;
+  margin: 0 0 40px 0;
+}
+@media screen and (max-width:768px) {
+  .page__section_xl-wide {
+    max-width: 768px;
+    margin: 0;
+  }  
+}
+.page__section_s-wide {
+  max-width: 1280px;
+  margin: 0 30px 40px 30px;
+}
+@media screen and (max-width:768px) {
+  .page__section_s-wide {
+    max-width: 768px;
+    margin: 30px 15px;
+  }  
+}
+
+@import url(./vendor/normalize.css);
+@import url(./fonts/fonts.css);
+
+@import url(./components/App/App.css);
+/* header */
+@import url(./components/Header/Header.css);
+@import url(./components/Logo/Logo.css);
+@import url(./components/Catalog/Catalog.css);
+@import url(./components/SearchForm/SearchForm.css);
+@import url(./components/HeaderSections/HeaderSections.css);
+@import url(./components/ShoppingCart/ShoppingCart.css);

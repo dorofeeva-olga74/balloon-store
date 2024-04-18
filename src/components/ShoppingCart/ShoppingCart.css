@@ -1,0 +1,14 @@
+.shopping-cart {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.shopping-cart__nav-box {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.shopping-cart__img {
+    width: 30px;
+    height: 30px;    
+}
