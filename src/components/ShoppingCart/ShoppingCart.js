@@ -1,18 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import ShoppingCart from '../../images/shopping-bag.svg';
+import ShoppingCartImg from '../../images/shopping-bag.svg';
 
-function HeaderSections() {
+function ShoppingCart() {
   return (
     <section className='shopping-cart'>
-      <nav className='shopping-cart__nav-box'>        
+      <nav className='shopping-cart__nav-box'>
         <NavLink
           to='/shopping-cart'
-          className='shopping-cart__nav'
-          href='#shopping-cart'>
+          className='shopping-cart__nav'>
           <img
             className='shopping-cart__img'
-            src={ShoppingCart}
+            src={ShoppingCartImg}
             alt='Корзина для покупок'
           />
         </NavLink>
@@ -20,4 +19,4 @@ function HeaderSections() {
     </section>
   );
 }
-export default HeaderSections;
+export default ShoppingCart;

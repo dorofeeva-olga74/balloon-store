@@ -1,0 +1,25 @@
+.hours__set {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.hours__title {
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15.6px;
+    color: #000000;
+    padding-bottom: 1px;
+    margin: 0;
+}
+.hours__operating {
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18.2px;
+    color: #000000;
+    padding: 0;
+    margin: 0;
+}

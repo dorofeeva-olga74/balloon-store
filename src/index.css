@@ -38,8 +38,15 @@ code {
 @import url(./components/App/App.css);
 /* header */
 @import url(./components/Header/Header.css);
+@import url(./components/HeaderTop/HeaderTop.css);
+@import url(./components/HeaderBottom/HeaderBottom.css);
 @import url(./components/Logo/Logo.css);
 @import url(./components/Catalog/Catalog.css);
 @import url(./components/SearchForm/SearchForm.css);
-@import url(./components/HeaderSections/HeaderSections.css);
+@import url(./components/HeaderSectionsTop/HeaderSectionsTop.css);
+@import url(./components/HeaderSectionsBottom/HeaderSectionsBottom.css);
+@import url(./components/HeaderSection/HeaderSection.css);
 @import url(./components/ShoppingCart/ShoppingCart.css);
+@import url(./components/Contacts/Contacts.css);
+@import url(./components/SocialMediaImg/SocialMediaImg.css);
+@import url(./components/Hours/Hours.css);
