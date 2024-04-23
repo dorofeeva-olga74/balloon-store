@@ -3,18 +3,22 @@ import Catalog from '../Catalog/Catalog.js';
 import SearchForm from '../SearchForm/SearchForm.js';
 import HeaderSectionsTop from '../HeaderSectionsTop/HeaderSectionsTop.js';
 import ShoppingCart from '../ShoppingCart/ShoppingCart.js';
+import Search from '../../images/icons-search.svg';
 
-function HeaderTop() { 
-  
-  
+function HeaderTop() {
   return (
     <div className='header-top'>
-        <Logo />
-        <Catalog />
-        <SearchForm />
-        <HeaderSectionsTop/>
-        <ShoppingCart />             
-    </div>    
+      <Logo />
+      <Catalog />
+      <SearchForm
+        src={Search}
+        placeholder={'Поиск'}
+      />
+      <HeaderSectionsTop />
+      <button className='header-mobile__button'>
+        <ShoppingCart />
+      </button>
+    </div>
   );
 }
 export default HeaderTop;

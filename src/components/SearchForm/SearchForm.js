@@ -1,11 +1,11 @@
-import Search from '../../images/icons-search.svg';
+// import Search from '../../images/icons-search.svg';
 // import { useState, useEffect } from 'react';
 // import { useLocation } from 'react-router-dom';
 
-function SearchForm() {
+function SearchForm({src, placeholder}) {
      
   return (
-    <section className='search'>
+    <section className='search'>      
       <form noValidate className='search__form'>
         <div className='search__input-container'>
         <button
@@ -14,7 +14,7 @@ function SearchForm() {
             aria-label='Поиск'>
             <img
               className='search__img'
-              src={Search}
+              src={src}
               alt='Поиск'
             />
           </button>
@@ -24,7 +24,7 @@ function SearchForm() {
             className='search__input'            
             type='text'
             name='query'
-            placeholder='Поиск'            
+            placeholder={placeholder}            
           />
           
         </div>

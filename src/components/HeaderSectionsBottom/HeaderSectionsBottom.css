@@ -1,7 +1,13 @@
 .sections {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;    
     align-items: center;
     margin: 2.5px 0 7px 0;  
     justify-content: space-around;
+}
+@media screen and (max-width: 768px) {
+    .sections {
+        max-width: 180px;
+        flex-wrap: wrap;         
+    }
 }

@@ -1,12 +1,40 @@
 .logo {
-    width: 86px;
-    height: 43px;
+    width: 76px;
+    height: 33px;
     margin: 32px 30px 32px 0;
-    padding: 0;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.08);
 }
 .logo:hover{
     opacity: 0.8;
+}
+@media screen and (max-width: 937px) {
+    .logo {
+        width: 58px;
+        height: 33px;
+        margin: 22px 20px 22px 0;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.08);
+    }
+} 
+
+@media screen and (max-width: 780px) {
+    .logo {      
+      margin: 22px 10px 22px 15px;            
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+      width: 56px;
+      height: 33px;
+      margin: 32px 30px 32px 15px;
+      padding: 10px;      
+    }
 }

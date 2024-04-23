@@ -1,5 +1,13 @@
 body {
-  margin: 0;
+  margin: 0; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;  
+  min-width: 320px;
+  margin: 0 auto;
+  align-content: center;
+  align-items: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -13,12 +21,12 @@ code {
 }
 .page__section_xl-wide {
   max-width: 1280px;
-  margin: 0 0 40px 0;
+  margin: 0 auto 40px auto;
 }
 @media screen and (max-width:768px) {
   .page__section_xl-wide {
     max-width: 768px;
-    margin: 0;
+    margin: 0 auto;
   }  
 }
 .page__section_s-wide {
@@ -50,3 +58,6 @@ code {
 @import url(./components/Contacts/Contacts.css);
 @import url(./components/SocialMediaImg/SocialMediaImg.css);
 @import url(./components/Hours/Hours.css);
+@import url(./components/HeaderMobile/HeaderMobile.css);
+@import url(./components/BurgerMenu/BurgerMenu.css);
+@import url(./components/ContextBurgerMenu/ContextBurgerMenu.css);

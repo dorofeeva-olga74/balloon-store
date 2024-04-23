@@ -1,7 +1,7 @@
 .hours__set {
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: 0 auto 0 0;
 }
 .hours__title {
     font-family: 'Inter', 'Arial', sans-serif;
@@ -22,4 +22,21 @@
     color: #000000;
     padding: 0;
     margin: 0;
+}
+@media screen and (max-width: 1045px) {
+    .hours__operating {
+        font-size: 12px;
+        line-height: 17px;        
+    }
+}
+@media screen and (max-width: 812px) {
+    .hours__title {
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 15px;        
+    }
+    .hours__operating {
+        font-size: 11px;
+        line-height: 15px;        
+    }
 }

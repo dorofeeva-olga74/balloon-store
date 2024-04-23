@@ -1,6 +1,6 @@
 .header-bottom {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;    
     justify-content:flex-start;
     align-items: center;
     margin: 0;

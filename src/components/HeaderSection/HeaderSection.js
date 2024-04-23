@@ -8,7 +8,7 @@ function HeaderSection({title, to}) {
         <RouterNavLink
           to={to}          
           className={`sections__nav ${title === 'Акции' ? 'sections__nav-action' : ''}`}
-          href={to}>
+          >
           {title}
         </RouterNavLink>        
       </nav>      

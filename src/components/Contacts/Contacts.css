@@ -4,6 +4,12 @@
     align-items: center;
     margin: 0 25px 0 33px;
 }
+.contacts__tel-box {
+    display: flex;
+}
+.contacts__social-box {
+    display: flex;
+}
 
 .contacts__rectangle {
     color: #323232;
@@ -18,3 +24,31 @@
     padding: 0;
     margin: 5px 25px 5px 10px;
 }
+@media screen and (max-width: 1256px) {
+    .contacts__tel-number {        
+        font-size: 14px;
+        line-height: 17.07px;            
+    }
+}
+@media screen and (max-width: 1143px) {
+    .contacts__tel-number {        
+        font-size: 12px;
+        line-height: 15.07px;            
+    }
+    .contacts__set {        
+        margin: 0 15px 0 18px;
+    }
+}
+@media screen and (max-width: 1070px) {
+    .contacts__tel-number {        
+        margin: 5px 15px 5px 5px;            
+    }
+}
+@media screen and (max-width: 824px) {
+    .contacts__tel-number {        
+        margin: 5px;        
+        font-size: 11px;
+        line-height: 13.07px;                 
+    }
+}
+
