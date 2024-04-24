@@ -50,7 +50,27 @@
         margin-right: 10px;             
     }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 768px) {
+    .sections__nav {
+        margin: 0 20px 0 15px;        
+        font-size: 16px;        
+        line-height: 20.8px;       
+    }
+}
+@media screen and (max-width: 726px) {
+    .sections__nav {
+        margin: 0 15px 0 10px;        
+        font-size: 14px;
+        line-height: 17.07px;        
+    }
+}
+@media screen and (max-width: 600px) {
+    .sections__nav {                
+        font-size: 12px;
+        line-height: 15.5px;      
+    }
+}
+@media screen and (max-width: 500px) {
     .sections__nav {
       margin-right: 0;      
       font-size: 14px;      

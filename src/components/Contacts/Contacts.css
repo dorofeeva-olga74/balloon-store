@@ -1,7 +1,7 @@
 .contacts__set {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
     margin: 0 25px 0 33px;
 }
 .contacts__tel-box {
@@ -51,4 +51,45 @@
         line-height: 13.07px;                 
     }
 }
-
+@media screen and (max-width: 768px) {
+    .contacts__set {       
+        margin: 0 20px 0 20px;
+    }
+    .contacts__tel-number {        
+        font-size: 15px;
+        line-height: 19.5px;        
+        margin: 5px 20px 5px 15px;
+    }
+    .contacts__rectangle {
+       width: 16px;
+    }
+}
+@media screen and (max-width: 726px) {
+    .contacts__tel-number {
+        margin: 5px 15px 5px 10px;
+        font-size: 14px;
+        line-height: 17.07px;              
+    }
+}
+@media screen and (max-width: 600px) {
+    .contacts__set {       
+        margin: 0 10px;
+    }
+    .contacts__tel-number {        
+        font-size: 12px;
+        line-height: 15.5px;        
+        margin: 5px 20px 5px 15px;
+    }    
+}
+@media screen and (max-width: 557px) {
+    .contacts__tel-number {        
+        font-size: 12px;
+        line-height: 15.5px;       
+        margin: 5px 15px 5px 10px;
+    }    
+}
+@media screen and (max-width: 529px) {
+    .contacts__set {       
+        display:none;
+    }
+}

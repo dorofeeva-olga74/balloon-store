@@ -30,13 +30,32 @@
     }
 }
 @media screen and (max-width: 812px) {
-    .hours__title {
-        font-weight: 500;
+    .hours__title {        
         font-size: 11px;
         line-height: 15px;        
     }
     .hours__operating {
         font-size: 11px;
         line-height: 15px;        
+    }
+}
+@media screen and (max-width: 768px) {
+    .hours__title {        
+        font-size: 12px;
+        line-height: 15.6px;             
+    }
+    .hours__operating {
+        font-size: 14px;
+        line-height: 18.2px;      
+    }
+}
+@media screen and (max-width: 572px) {
+    .hours__title {        
+        font-size: 11px;
+        line-height: 14.6px;             
+    }
+    .hours__operating {
+        font-size: 12px;
+        line-height: 15.5px;      
     }
 }

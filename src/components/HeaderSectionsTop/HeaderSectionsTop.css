@@ -5,6 +5,11 @@
     margin: 0;  
     justify-content: space-around;
 }
+@media screen and (max-width: 768px) {
+    .sections {
+        display: none;       
+    }
+}
 /* .sections__nav-box {
     display: flex;
     margin: 0;

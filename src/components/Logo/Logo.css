@@ -13,14 +13,8 @@
 }
 @media screen and (max-width: 937px) {
     .logo {
-        width: 58px;
-        height: 33px;
-        margin: 22px 20px 22px 0;
-        padding: 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.08);
+        width: 58px;        
+        margin: 22px 20px 22px 0;        
     }
 } 
 
@@ -29,12 +23,23 @@
       margin: 22px 10px 22px 15px;            
     }
 }
-
 @media screen and (max-width: 768px) {
+    .logo {                
+        margin: 17px 25px 17px 0;        
+    }
+}
+@media screen and (max-width: 768px) {
+    .logo {                
+        margin: 17px 15px 17px 0;        
+    }
+}
+@media screen and (max-width: 528px) {
     .logo {
-      width: 56px;
-      height: 33px;
-      margin: 32px 30px 32px 15px;
-      padding: 10px;      
+        width: 153px;            
+    }
+}
+@media screen and (max-width: 500px) {
+    .logo {         
+      margin: 32px 30px 32px 15px;           
     }
 }

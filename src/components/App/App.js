@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // import { Routes, Route, useNavigate, Navigate } from 'react-router-dom';
 import Header from '../Header/Header';
+import HeaderTablet from '../HeaderTablet/HeaderTablet';
 import HeaderMobile from '../HeaderMobile/HeaderMobile';
 
 function App() {
@@ -63,7 +64,13 @@ function App() {
         setIsContextBurgerMenuOpened={setIsContextBurgerMenuOpened}
         onClose={closeAllPopups}
         onCloseOverlay={handleOverlayClick}
-      />     
+      /> 
+      <HeaderTablet
+        isOpen={isContextBurgerMenuOpened}
+        setIsContextBurgerMenuOpened={setIsContextBurgerMenuOpened}
+        onClose={closeAllPopups}
+        onCloseOverlay={handleOverlayClick}
+      />      
       <Header
         isOpen={isContextBurgerMenuOpened}
         setIsContextBurgerMenuOpened={setIsContextBurgerMenuOpened}

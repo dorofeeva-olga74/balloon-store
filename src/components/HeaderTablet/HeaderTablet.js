@@ -1,30 +1,33 @@
 import BurgerMenu from '../BurgerMenu/BurgerMenu.js';
+import Catalog from '../Catalog/Catalog.js';
 import SearchForm from '../SearchForm/SearchForm.js';
 import SearchMobile from '../../images/icons-search-mobile.svg';
 import ShoppingCart from '../ShoppingCart/ShoppingCart.js';
-import Catalog from '../Catalog/Catalog.js';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 import Actions from '../../images/Vector.svg';
 import Logo from '../Logo/Logo.js';
 // import HeaderSectionsBottom from '../HeaderSectionsBottom/HeaderSectionsBottom.js';
 import Rectangle from '../../images/Rectangle.svg';
-// import HeaderSection from '../HeaderSection/HeaderSection.js';
+import HeaderSection from '../HeaderSection/HeaderSection.js';
+import Contacts from '../Contacts/Contacts';
+import Hours from '../Hours/Hours';
 
-function HeaderMobile({ title, to }) {
+function HeaderTablet({ title, to }) {
   return (
     <>
-      <header className='header-mobile'>
-        <div className='header-mobile__top'>
+      <header className='header-tablet'>
+        <div className='header-tablet__top'>
           <BurgerMenu />
+          <Catalog />
           <SearchForm
             src={SearchMobile}
             placeholder={'Поиск по сайту'}
           />
-          <button className='header-mobile__button'>
-            <nav className='header-mobile__nav-box'>
+          <button className='header-tablet__button'>
+            <nav className='header-tablet__nav-box'>
               <RouterNavLink
                 to={to}
-                className='header-mobile__nav-action'>
+                className='header-tablet__nav-action'>
                 {title}
               </RouterNavLink>
             </nav>
@@ -34,34 +37,33 @@ function HeaderMobile({ title, to }) {
               alt='Изображение процентов'
             />
           </button>
-          <button className='header-mobile__button'>
+          <button className='header-tablet__button'>
             <ShoppingCart />
           </button>
         </div>
-        <div className='header-mobile__bottom'>
+        <div className='header-tablet__bottom'>
           <Logo />
-          <div className='header-mobile__set'>
+          <div className='header-tablet__set'>
             <img
-              className='header-mobile__rectangle'
+              className='header-tablet__rectangle'
               src={Rectangle}
               alt='Угол вниз'
             />
             {/* <div className='header-mobile__sections'>
               <HeaderSectionsBottom />
             </div> */}
-            <Catalog />
-            {/* <div className='header-mobile__sections'>
-                <nav className='sections__nav-box'>
-                  <HeaderSection
-                    title='Латексные шары'
-                    to='/latex-balloons'
-                  />
-                </nav>
-            </div> */}
+            <nav className='sections__nav-box'>
+              <HeaderSection
+                title='Латексные шары'
+                to='/latex-balloons'
+              />
+            </nav>
           </div>
+          <Contacts />
+          <Hours />
         </div>
       </header>
     </>
   );
 }
-export default HeaderMobile;
+export default HeaderTablet;

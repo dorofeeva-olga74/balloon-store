@@ -27,3 +27,21 @@
         display: none;              
     }
 }
+@media screen and (max-width: 768px) {
+    .social-media {
+        display: flex;
+        width: 25px;
+        height: 25px;              
+    }
+}
+@media screen and (max-width: 680px) {
+    .social-media {       
+        width: 15px;
+        height: 15px;              
+    }
+}
+@media screen and (max-width: 660px) {
+    .social-media {       
+        display: none;             
+    }
+}
