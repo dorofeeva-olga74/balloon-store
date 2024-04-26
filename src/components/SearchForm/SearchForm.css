@@ -79,6 +79,7 @@
         max-width: 237px;        
     }
 }
+
 @media screen and (max-width:870px) { 
     .search {       
         max-width: 165px;      
@@ -88,6 +89,7 @@
         max-width: 115px;        
     }
 }
+
 @media screen and (max-width: 773px) {
     .search {       
         max-width: 183px;      
@@ -99,6 +101,7 @@
         line-height: 15.07px;       
     }    
 }
+
 @media screen and (max-width:768px) { 
     .search {       
         max-width: 443px;
@@ -117,6 +120,7 @@
         margin: 0 20px 0 28px;  
     }
 }
+
 @media screen and (max-width:750px) {   
     .search__input {
         max-width:204px;                     
@@ -127,9 +131,16 @@
         margin: 0 10px 0 13px;        
     }
 }
+
 @media screen and (max-width:690px) {   
     .search__input {
         max-width:150px;                     
+    }    
+}
+
+@media screen and (max-width:600px) {   
+    .search__input {
+        max-width:125px;                     
     }    
 }
 @media screen and (max-width:529px) {   
@@ -137,18 +148,19 @@
         max-width:132px;                     
     }    
 }
+
 @media screen and (max-width:500px) { 
     .search {       
-        max-width: 200px;
-        margin: 0 12px 0 4px;                
+        max-width: 350px;
+        margin: 0 12px;                
     }
     .search__input-container {
         border-radius: 0;
         border: none;
-       
+        width: 100%;       
     }    
-    .search__input {
-        width: 110px;
+    .search__input {       
+        max-width: 350px;
         font-weight: 400;               
         padding: 1px;        
     }
@@ -157,4 +169,38 @@
         height:20px;
         margin: 0 10px 0 18px;      
     }    
+}
+
+@media screen and (max-width:422px) { 
+    .search {       
+        max-width: 350px;
+        margin: 0;                
+    }    
+    .search__input {        
+        max-width: 184px;                
+    } 
+    .search__img {
+        width: 10px;
+        height: 10px;
+        margin: 0 15px 0 28px;      
+    }      
+}
+
+@media screen and (max-width: 400px) { 
+    .search {       
+        max-width: 165px;
+        margin: 0;                
+    }    
+    .search__input {        
+        max-width:110px;                
+    }    
+}
+
+@media screen and (max-width: 320px) { 
+    .search {       
+        max-width: 135px;                     
+    } 
+    .search__input {        
+        max-width: 106px;                
+    }      
 }

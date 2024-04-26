@@ -13,6 +13,7 @@
 
 .contacts__rectangle {
     color: #323232;
+    width: 16px;
 }
 .contacts__tel-number {
     font-family: 'Inter', 'Arial', sans-serif;
@@ -59,10 +60,7 @@
         font-size: 15px;
         line-height: 19.5px;        
         margin: 5px 20px 5px 15px;
-    }
-    .contacts__rectangle {
-       width: 16px;
-    }
+    }    
 }
 @media screen and (max-width: 726px) {
     .contacts__tel-number {

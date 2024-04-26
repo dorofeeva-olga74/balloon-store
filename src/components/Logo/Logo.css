@@ -40,6 +40,12 @@
 }
 @media screen and (max-width: 500px) {
     .logo {         
-      margin: 32px 30px 32px 15px;           
+      margin: 10px 15px 15px 0;
+      width: 58px;           
+    }
+}
+@media screen and (max-width: 400px) {
+    .logo {       
+        width: 95px;
     }
 }

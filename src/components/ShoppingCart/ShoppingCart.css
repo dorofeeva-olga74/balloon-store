@@ -23,13 +23,12 @@
     .shopping-cart__img {    
         width: 20px;
         height: 20px;        
-    }
-    
+    }    
 }
+
 @media screen and (max-width:768px) { 
    .shopping-cart__img {
         width: 18px;
-        height:18px;
-        /* padding: 15px;       */
+        height:18px;       
     }    
 }
