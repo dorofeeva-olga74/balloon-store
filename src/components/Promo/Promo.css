@@ -1,0 +1,194 @@
+.promo {
+    display: flex;    
+    justify-content: flex-end;    
+    width: 100%;       
+    margin: 0 auto 40px auto;    
+    padding: 0;    
+    background: #A1E2EB;    
+}
+
+.promo__container-img {
+    display: flex;    
+    padding: 0;
+    margin: 0;
+}
+
+.promo__img {
+    display: flex;
+    width: 100%;    
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+    background-size: cover;
+}
+
+.promo__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;    
+    padding: 0 0 139px 0;
+    margin: 0;
+    z-index: 1;
+    width: 40%; 
+}
+
+.promo__title {
+    color: #FFF;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 104px;
+    color:  #FFFFFF;
+    margin: 130px auto 3px 50px;
+    padding: 0;
+}
+
+.promo__text {
+    color: #FFF;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 63px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 81.9px;
+    color:  #FFFFFF;
+    width: 120%;    
+    margin: 0 auto 60px 50px;
+    padding: 0; 
+    z-index: 1;
+    white-space: nowrap;  
+}
+.promo__container-nav {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto auto 50px;
+}
+
+@media screen and (max-width:1280px) {
+    .promo {              
+        margin: 0 auto 40px auto;      
+    }
+    .promo__container {            
+        padding: 0 0 129px 0;                   
+    } 
+    .promo__title {        
+        font-size: 75px;    
+        line-height: 99px;
+        margin: 120px auto 3px 30px;             
+    }    
+    .promo__text {        
+        font-size: 58px;        
+        line-height: 77px;            
+        margin: 0 auto 60px 30px;    
+    }
+    .promo__container-nav {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto auto 30px;
+    }    
+}
+
+@media screen and (max-width:1065px) {
+    .promo__container {            
+        padding: 0 0 109px 0;                   
+    } 
+    .promo__title {        
+        font-size: 65px;    
+        line-height: 89px;
+        margin: 100px auto 3px 30px;             
+    }    
+    .promo__text {        
+        font-size: 48px;        
+        line-height: 67px;            
+        margin: 0 auto 50px 30px;    
+    }   
+}
+
+@media screen and (max-width:920px) {
+    .promo__container {            
+        padding: 0 0 99px 0;                   
+    } 
+    .promo__title {        
+        font-size: 55px;    
+        line-height: 78px;
+        margin: 90px auto 3px 30px;             
+    }    
+    .promo__text {        
+        font-size: 38px;        
+        line-height: 57px;            
+        margin: 0 auto 40px 30px;    
+    }   
+}
+@media screen and (max-width:725px) {
+    .promo__container {            
+        padding: 0 0 89px 0;                   
+    } 
+    .promo__title {        
+        font-size: 45px;    
+        line-height: 68px;
+        margin: 80px auto 3px 30px;             
+    }    
+    .promo__text {        
+        font-size: 33px;        
+        line-height: 52px;            
+        margin: 0 auto 30px 30px;    
+    }   
+}
+
+@media screen and (max-width:635px) {
+    .promo__container {            
+        padding: 0 0 74px 0;                   
+    } 
+    .promo__title {        
+        font-size: 38px;    
+        line-height: 62px;
+        margin: 65px auto 3px 20px;             
+    }    
+    .promo__text {        
+        font-size: 28px;        
+        line-height: 47px;            
+        margin: 0 auto 30px 20px;    
+    }
+    .promo__container-nav {        
+        margin: 0 auto auto 20px;
+    }       
+}
+@media screen and (max-width:550px) {
+    .promo__title {        
+        font-size: 32px;    
+        line-height: 52px;
+        margin: 65px auto 3px 15px;             
+    }   
+    .promo__text {        
+        font-size: 24px;        
+        line-height: 40px;            
+        margin: 0 auto 30px 15px;    
+    }
+    .promo__container-nav {        
+        margin: 0 auto auto 15px;
+    }       
+}
+
+@media screen and (max-width:450px) {
+    .promo {              
+        margin: 0 auto 30px auto;      
+    }
+    .promo__container {            
+        padding: 0 0 36px 0;                    
+    } 
+    .promo__title {
+        width: 120%;
+        font-size: 28px;        
+        line-height: 36.4px;        
+        margin: 37px auto 0 11px;        
+    }    
+    .promo__text {        
+        font-size: 18px;        
+        line-height: 23.4px;            
+        margin: 0 auto 25px 11px;                 
+    }
+    .promo__container-nav {        
+        margin: 0 auto auto 11px;
+    }    
+}
+

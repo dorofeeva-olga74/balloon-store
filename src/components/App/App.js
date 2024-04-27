@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '../Header/Header';
 import HeaderTablet from '../HeaderTablet/HeaderTablet';
 import HeaderMobile from '../HeaderMobile/HeaderMobile';
+import Main from '../Main/Main';
 
 function App() {
   const [isContextBurgerMenuOpened, setIsContextBurgerMenuOpened] = useState(false);
@@ -77,6 +78,7 @@ function App() {
         onClose={closeAllPopups}
         onCloseOverlay={handleOverlayClick}
       />
+      <Main />
     </>  
   )
 }
