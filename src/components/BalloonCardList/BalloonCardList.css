@@ -1,0 +1,30 @@
+.balloon__card-list {
+    padding: 0;
+    display:grid;
+    align-items: start;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(5, 2fr);
+    gap: 30px 20px;
+}
+@media screen and (max-width:1500px) {
+    .balloon__card-list {
+        grid-template-columns: repeat(4, 2fr);            
+    }    
+}
+@media screen and (max-width:768px) {
+    .balloon__card-list {
+        grid-template-columns: repeat(3, 2fr);       
+    }    
+}
+@media screen and (max-width:500px) {
+    .balloon__card-list {
+        grid-template-columns: repeat(2, 3fr);
+        gap: 25px 20px;
+    }    
+}
+@media screen and (max-width:320px) {
+    .balloon__card-list {
+        grid-template-columns: repeat(1, 4fr);        
+    }    
+}

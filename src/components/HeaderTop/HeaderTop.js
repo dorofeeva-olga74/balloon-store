@@ -1,5 +1,5 @@
 import Logo from '../Logo/Logo.js';
-import Catalog from '../Catalog/Catalog.js';
+import CatalogBtn from '../CatalogBtn/CatalogBtn.js';
 import SearchForm from '../SearchForm/SearchForm.js';
 import HeaderSectionsTop from '../HeaderSectionsTop/HeaderSectionsTop.js';
 import ShoppingCart from '../ShoppingCart/ShoppingCart.js';
@@ -9,7 +9,7 @@ function HeaderTop() {
   return (
     <div className='header-top'>
       <Logo />
-      <Catalog />
+      <CatalogBtn />
       <SearchForm
         src={Search}
         placeholder={'Поиск'}

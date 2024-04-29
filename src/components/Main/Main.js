@@ -1,15 +1,16 @@
 import React from 'react';
 import Promo from '../Promo/Promo';
-// import AboutProject from '../AboutProject/AboutProject';
-// import Techs from '../Techs/Techs';
-// import AboutMe from '../AboutMe/AboutMe';
+import Segment from '../Segment/Segment';
 
 function Main() {
   return (
     <>
       <main className='main'>
         <Promo />
-        
+        <Segment
+          subtitle={'Популярные категории'}
+          text={'смотреть всё'}
+        />
       </main>
     </>
   );

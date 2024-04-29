@@ -1,9 +1,11 @@
+
+
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100vw;  
-  min-width: 320px;
+  width: 100vw;
+  /* overflow-x: hidden; */ 
   margin: 0 auto;
   align-content: center;
   align-items: center;
@@ -58,7 +60,7 @@ code {
 @import url(./components/HeaderTop/HeaderTop.css);
 @import url(./components/HeaderBottom/HeaderBottom.css);
 @import url(./components/Logo/Logo.css);
-@import url(./components/Catalog/Catalog.css);
+@import url(./components/CatalogBtn/CatalogBtn.css);
 @import url(./components/SearchForm/SearchForm.css);
 @import url(./components/HeaderSectionsTop/HeaderSectionsTop.css);
 @import url(./components/HeaderSectionsBottom/HeaderSectionsBottom.css);
@@ -75,3 +77,6 @@ code {
 @import url(./components/Main/Main.css);
 @import url(./components/Promo/Promo.css);
 @import url(./components/NavBox/NavBox.css);
+@import url(./components/Segment/Segment.css);
+@import url(./components/BalloonCardList/BalloonCardList.css);
+@import url(./components/BalloonCard/BalloonCard.css);

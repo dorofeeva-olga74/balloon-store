@@ -1,11 +1,11 @@
 import React from "react";
 
 
-function Catalog () {
+function CatalogBtn () {
 
     return (        
         <button className='catalog-btn' type='button'>Каталог</button>                
     )
 }
 
-export default Catalog;
+export default CatalogBtn;

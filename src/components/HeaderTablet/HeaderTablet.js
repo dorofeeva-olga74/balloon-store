@@ -1,5 +1,5 @@
 import BurgerMenu from '../BurgerMenu/BurgerMenu.js';
-import Catalog from '../Catalog/Catalog.js';
+import CatalogBtn from '../CatalogBtn/CatalogBtn.js';
 import SearchForm from '../SearchForm/SearchForm.js';
 import SearchMobile from '../../images/icons-search-mobile.svg';
 import ShoppingCart from '../ShoppingCart/ShoppingCart.js';
@@ -18,7 +18,7 @@ function HeaderTablet({ title, to }) {
       <header className='header-tablet'>
         <div className='header-tablet__top'>
           <BurgerMenu />
-          <Catalog />
+          <CatalogBtn />
           <SearchForm
             src={SearchMobile}
             placeholder={'Поиск по сайту'}

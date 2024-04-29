@@ -9,8 +9,16 @@ function Promo() {
         <h1 className='promo__title'>Распродажа</h1>
         <p className='promo__text'>в честь Нового года!</p>
         <div className='promo__container-nav'>
-          {/* <NavBox text={'Все акции'} style={{color: 'black', background: 'white'}}/>          
-          <NavBox text={'Подробнее'} style={{color: 'white', background: 'transparent'}} /> */}
+          <NavBox
+            text={'Все акции'}
+            style={{ color: 'black', background: 'white' }}
+          />
+          <NavBox
+            text={'Подробнее'}
+            style={{ color: 'white', background: 'transparent' }}
+          />
+        </div>
+        <div className='promo__container-nav_mobile'>
           <NavBox text={'Покажите!'} style={{color: 'black', background: 'white'}} />
         </div>
       </div>
