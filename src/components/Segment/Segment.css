@@ -1,7 +1,7 @@
 .segment {
     display: flex;
     flex-direction: column;
-    margin: 0 30px 40px 30px;
+    margin: 0 30px;
     padding: 0;
 }
 .segment-set {
@@ -64,6 +64,16 @@
         font-family: 'Inter', 'Arial', sans-serif;
         font-size: 14px;        
         line-height: 18.8px;           
+    }
+}
+@media screen and (max-width:635px) {    
+    .segment {       
+        margin: 0 20px;        
+    }
+}
+@media screen and (max-width:550px) {    
+    .segment {       
+        margin: 0 15px;        
     }
 }
 

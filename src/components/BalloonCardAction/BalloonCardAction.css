@@ -1,0 +1,107 @@
+.card {
+    max-width: 329px;    
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;    
+}
+
+.card__img {
+    width: 100%;    
+    border-radius: 7px;
+}
+
+.card__title-section {
+    display: flex;
+    flex-direction: row;   
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card__title {
+    display: flex;
+    color: #000000;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20.8px;
+    margin: 15px auto 0 auto;
+    text-align:center;
+    padding: 0;
+    letter-spacing: 2px;
+}
+
+/* .card__title-product {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Количество строк, после которых появится многоточие */
+    /* overflow: hidden;
+    text-overflow: ellipsis; 
+} */
+.card__price-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px 0 10px 0;
+}
+.card__price-action {
+    display: flex;
+    color: #000000;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20.8px;
+    margin: 0 auto;
+    text-align:center;
+    padding: 0;
+    letter-spacing: 2px;
+}
+.card__price-action::after {
+    content: "p";
+}
+.card__price {
+    display: flex;
+    color:  #8B8B8B;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 13px;
+    margin: 0 auto;
+    text-align:center;
+    padding: 0;
+    letter-spacing: 2px;
+    text-decoration-line: line-through; /*зачеркивание текста*/
+    text-decoration-color: #8B8B8B; /* Цвет зачеркивания */    
+}
+.card__price::after {
+    content: "p";
+}
+.card__product-action {
+    display: flex;
+    color: #FF32A1;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 13px;
+    margin: 0 auto;
+    text-align:center;
+    padding: 0;
+    letter-spacing: 2px; 
+}
+.card__product-action::after {
+    content: "%";
+}
+
+@media screen and (max-width: 768px) {
+    .card__title {
+        font-size: 14px;        
+        line-height: 18.2px;
+        margin: 15px auto 0 auto;       
+        letter-spacing: 2px;
+    }
+}

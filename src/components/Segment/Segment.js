@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import SegmentRectangle from '../../images/segment-rectangle.svg';
-import BalloonCardList from '../BalloonCardList/BalloonCardList';
 
 function Segment({ subtitle, text }) {
   return (
@@ -20,8 +19,7 @@ function Segment({ subtitle, text }) {
             />
           </NavLink>          
         </nav>
-      </div>
-      <BalloonCardList name={'Баблобоксы'} />
+      </div>      
     </section>
   );
 }
