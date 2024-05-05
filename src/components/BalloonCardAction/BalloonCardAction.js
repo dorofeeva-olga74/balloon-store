@@ -7,7 +7,7 @@ function BalloonCardAction({ name, src, alt, price, productAction }) {
   };
   //   const location = useLocation();
   return (
-    <div className='card'>
+    <div className='card card__action'>
       <img
         className='card__img'
         src={src}

@@ -17,11 +17,17 @@ function BalloonCardList({ subtitle }) {
   const allProducts = filteredAndCopiedBalloons.flatMap((balloon) => balloon.products);
 
   const getTopCategoriesCountOnPage = (screenWidth) => {
-    if (screenWidth > 1440) {
+    if (screenWidth > 1822) {
       return 12;
+    } else if (screenWidth > 1500) {
+      return 10;
     } else if (screenWidth > 1024) {
       return 8;
-    } else if (screenWidth > 450) {
+    } else if (screenWidth > 958) {
+      return 6;
+    } else if (screenWidth > 768) {
+      return 8;
+    } else if (screenWidth > 320) {
       return 6;
     } else {
       return 4;
@@ -29,16 +35,30 @@ function BalloonCardList({ subtitle }) {
   };
 
   const getTopProductsCountOnPage = (screenWidth) => {
-    if (screenWidth > 1982) {
+    if (screenWidth > 2542) {
       return 7;
-    } else if (screenWidth > 1700) {
+    } else if (screenWidth > 2181) {
       return 6;
-    } else if (screenWidth > 1280) {
+    } else if (screenWidth > 1823) {
       return 5;
-    } else if (screenWidth > 1145) {
+    } else if (screenWidth > 1587) {
+      return 4;
+    } else if (screenWidth > 1308) {
+      return 5;
+    } else if (screenWidth > 1290) {
+      return 4;
+    } else if (screenWidth > 1090) {
+      return 5;
+    } else if (screenWidth > 814) {
       return 4;
     } else if (screenWidth > 768) {
       return 6;
+    } else if (screenWidth > 744) {
+      return 4;
+    } else if (screenWidth > 653) {
+      return 6;
+    } else if (screenWidth > 600) {
+      return 3;
     } else {
       return 4;
     }
