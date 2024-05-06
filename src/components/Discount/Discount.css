@@ -1,0 +1,158 @@
+.discount {
+  display: flex;
+  background-image: url('../../images/Girl-background.png');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: left; 
+}
+
+.discount__order-container {
+    display: flex;
+    flex-direction: column;
+    margin: 69px 91px 65px auto;
+}
+.discount__title {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 100.35px;
+    color:  #FFFFFF;
+    letter-spacing: 2px;
+}
+.discount__title-text {
+    display: flex;
+    margin: 0 0 40px 0;
+    padding: 0;
+    align-items: center;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 55.75px;
+    color:  #FFFFFF;
+    letter-spacing: 2px;
+}
+.discount__form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.discount__input {
+    color:  #6C6C6C;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    border-radius: 25.15px;
+    background: #FFFFFF;
+    border: none;
+    padding: 25.8px 30px;
+    margin: 0;
+    max-width: 75%;
+    letter-spacing: 2px;
+}
+.discount__submit:enabled {    
+    background: transparent;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 28.74px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34.49px;
+    width: 85%;   
+    padding: 20.36px 80px;
+    margin: 30.52px auto 64.6px 0;
+    border: 2.39px solid rgba(255, 255, 255, 1);
+    border-radius: 25.15px;
+    cursor: pointer;
+    letter-spacing: 2px;    
+}
+.discount__submit:hover{
+    opacity: 0.8;
+}
+.discount__submit:disabled{ 
+    background: transparent;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 28.74px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34.49px;
+    width: 85%;
+    /* min-height: 75.44px; */
+    padding: 20.36px 80px;
+    margin: 30.52px auto 64.6px 0;
+    border: 2.39px solid rgba(255, 255, 255, 1);
+    border-radius: 25.15px;
+    cursor: pointer;
+    letter-spacing: 2px;   
+    cursor: default;    
+    pointer-events: none;    
+  }
+
+  @media screen and (max-width:1333px) {    
+    .discount__order-container {
+        margin: 69px 30px 65px auto;
+    }    
+  }
+
+  @media screen and (max-width:1024px) { 
+    .discount__order-container {
+        margin: 69px auto 65px auto;
+        align-items: center;
+    }
+    .discount__input {
+        margin: 0 auto;
+        max-width: 87%;
+        width: 100%;
+    }
+    .discount__submit:enabled { 
+        margin: 20px auto 0 auto; 
+        width: 100%;
+    }
+  }
+  @media screen and (max-width:768px) { 
+    .discount {
+        background-image: none;
+        background-color: #F1BCC2;
+    }      
+    .discount__order-container {
+        margin: 38px auto 30px auto;
+    }
+    .discount__title {        
+        font-size: 40px;        
+        font-weight: 700;
+        line-height: 62px;       
+    }
+    .discount__title-text {
+        font-size: 18px;        
+        line-height: 27.9px;        
+        letter-spacing: 2px;
+        margin: 0 auto 25px auto;
+    }
+    .discount__input {        
+        font-size: 14px;        
+        font-weight: 500;
+        line-height: 16.8px;
+        border-radius: 11px;        
+        padding: 12px 10px;
+        max-width: 90%;       
+    }
+    .discount__submit:enabled {        
+        font-size: 16px;        
+        line-height: 19.2px;          
+        padding: 15px 50px;                
+        border: 2px solid rgba(255, 255, 255, 1);
+        border-radius: 5px;           
+    }   
+  }
+
+    

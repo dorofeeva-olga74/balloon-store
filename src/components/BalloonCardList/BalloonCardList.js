@@ -72,7 +72,7 @@ function BalloonCardList({ subtitle }) {
   subtitle === 'Лидеры продаж'
     ? (visibleProducts = allProducts.sort((a, b) => b.productRating - a.productRating).slice(0, topProductsCountOnPage))
     : (visibleProducts = balloons.slice(0, topCategoriesCountOnPage));
-  console.log(visibleProducts);
+  // console.log(visibleProducts);
 
   // создаю переменную для хранения идентификатора таймера
   const timerId = useRef(null);

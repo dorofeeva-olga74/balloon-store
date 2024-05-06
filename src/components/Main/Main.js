@@ -2,6 +2,7 @@ import React from 'react';
 import Promo from '../Promo/Promo';
 import Segment from '../Segment/Segment';
 import BalloonCardList from '../BalloonCardList/BalloonCardList';
+import Discount from '../Discount/Discount';
 
 function Main() {
   return (
@@ -18,6 +19,7 @@ function Main() {
           text={'показать всё'}
         />
         <BalloonCardList subtitle={'Лидеры продаж'} />
+        <Discount />
       </main>
     </>
   );
