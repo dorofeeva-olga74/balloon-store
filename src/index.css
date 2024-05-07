@@ -3,9 +3,8 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 100vw;
-  /* overflow-x: hidden; */ 
+  justify-content: center;  
+  max-width: 1920px;  
   margin: 0 auto;
   align-content: center;
   align-items: center;
@@ -82,3 +81,4 @@ code {
 @import url(./components/BalloonCard/BalloonCard.css);
 @import url(./components/BalloonCardAction/BalloonCardAction.css);
 @import url(./components/Discount/Discount.css);
+@import url(./components/StockList/StockList.css);

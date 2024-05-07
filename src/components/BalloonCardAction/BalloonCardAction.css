@@ -221,4 +221,7 @@
     .card {
         max-width: 329px;           
     }
+    .card__action {
+        max-width: 287px;  
+    }
 }

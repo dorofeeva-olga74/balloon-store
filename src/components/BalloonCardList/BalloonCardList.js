@@ -35,9 +35,7 @@ function BalloonCardList({ subtitle }) {
   };
 
   const getTopProductsCountOnPage = (screenWidth) => {
-    if (screenWidth > 2542) {
-      return 7;
-    } else if (screenWidth > 2181) {
+    if (screenWidth > 2181) {
       return 6;
     } else if (screenWidth > 1823) {
       return 5;
@@ -68,10 +66,21 @@ function BalloonCardList({ subtitle }) {
   const [topProductsCountOnPage, setTopProductsCountOnPage] = useState(getTopProductsCountOnPage(screenWidth)); // количество топпродуктов на странице при загрузке
   const [topCategoriesCountOnPage, setTopCategoriesCountOnPage] = useState(getTopCategoriesCountOnPage(screenWidth)); // количество топпродуктов на странице при загрузке
   // Сортируем все продукты по рейтингу и выбираем первые несколько в зависимости от разрешения экрана
+  // let visibleProducts;
+  // subtitle === 'Лидеры продаж'
+  //   ? (visibleProducts = allProducts.sort((a, b) => b.productRating - a.productRating).slice(0, topProductsCountOnPage))
+  //   : (visibleProducts = balloons.slice(0, topCategoriesCountOnPage));
   let visibleProducts;
-  subtitle === 'Лидеры продаж'
-    ? (visibleProducts = allProducts.sort((a, b) => b.productRating - a.productRating).slice(0, topProductsCountOnPage))
-    : (visibleProducts = balloons.slice(0, topCategoriesCountOnPage));
+if (subtitle === 'Лидеры продаж') {
+  visibleProducts = allProducts.sort((a, b) => b.productRating - a.productRating).slice(0, topProductsCountOnPage);
+} else if (subtitle === 'Акции') {
+  visibleProducts = allProducts
+    .filter((product) => product.productAction && product.productAction.startDate)
+    .sort((a, b) => new Date(a.productAction.startDate) - new Date(b.productAction.startDate))
+    .slice(0, topProductsCountOnPage);
+} else {
+  visibleProducts = balloons.slice(0, topCategoriesCountOnPage);
+}
   // console.log(visibleProducts);
 
   // создаю переменную для хранения идентификатора таймера
@@ -110,17 +119,9 @@ function BalloonCardList({ subtitle }) {
   }, [timerId, screenWidth, topProductsCountOnPage, topCategoriesCountOnPage]);
 
   return (
-    <section className={`balloon__card-list ${subtitle === 'Лидеры продаж' ? 'balloon__card-list_top-sales' : ''}`}>
-      {subtitle === 'Популярные категории'
-        ? visibleProducts.map((balloon) => (
-            <BalloonCard
-              key={balloon.id}
-              name={balloon.name}
-              src={balloon.image}
-              alt={balloon.name}
-            />
-          ))
-        : subtitle === 'Лидеры продаж'
+    <section
+      className={`balloon__card-list ${subtitle === 'Лидеры продаж' || 'Акции' ? 'balloon__card-list_top-sales' : ''}`}>
+      {subtitle === 'Лидеры продаж' || subtitle === 'Акции'
         ? visibleProducts.map((product, index) => (
             <BalloonCardAction
               key={`product-${index}`} // Используем index для уникальности ключа
@@ -129,6 +130,15 @@ function BalloonCardList({ subtitle }) {
               alt={product.productName}
               price={product.productPrice}
               productAction={product.productAction}
+            />
+          ))
+        : subtitle === 'Популярные категории'
+        ? visibleProducts.map((balloon) => (
+            <BalloonCard
+              key={balloon.id}
+              name={balloon.name}
+              src={balloon.image}
+              alt={balloon.name}
             />
           ))
         : null}

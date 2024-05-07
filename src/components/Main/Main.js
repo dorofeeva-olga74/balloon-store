@@ -20,6 +20,11 @@ function Main() {
         />
         <BalloonCardList subtitle={'Лидеры продаж'} />
         <Discount />
+        <Segment
+          subtitle={'Акции'}
+          text={'показать всё'}
+        />
+        <BalloonCardList subtitle={'Акции'} />
       </main>
     </>
   );

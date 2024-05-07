@@ -1,26 +1,38 @@
 import React, { useState } from 'react';
 
 function Discount() {
-  const patternTelephone = '^((\\+7|7|8)+([0-9]){10})$';
-  const [telephone, setTelephone] = useState('+7 '); // Начальное значение
+  const patternTelephone = '^\\+7\\(\\d{3}\\)\\d{3}-\\d{4}$';
+  const [inputValue, setInputValue] = useState('+7');
 
-    const handleTelephoneChange = (e) => {
-      // Проверка на ввод только цифр и длину номера
-      const value = e.target.value.replace(/[^+\d]+/g, ''); // Удаляем все символы, кроме цифр и плюса
-      if (value.length <= 12) {
-        setTelephone(value);
-      }
-    };
-//   const handleTelephoneChange = (e) => {
-//     // Проверка на соответствие формату: +7 914 970 99 27
-//     const value = e.target.value.replace(/[^\d+ ]+/g, ''); // Удаляем все символы, кроме цифр, плюса и пробелов
-//     // Разрешаем ввод пробелов в определенных позициях номера телефона
-//     if (value.match(/^(\\+7|7|8)?(\d{3})[ ]?(\d{3})[ ]?(\d{2})[ ]?(\d{2})$/)) {
-//       // Форматируем номер, добавляя пробелы
-//       const formattedValue = value.replace(/(\\+7|7|8)?(\d{3})(\d{3})(\d{2})(\d{2})/, '+7 $2 $3 $4 $5');
-//       setTelephone(formattedValue);
-//     }
-//   };
+  const handleInput = (e) => {
+    const formattedPhoneNumber = formatPhoneNumber(e.target.value);
+    setInputValue(formattedPhoneNumber);
+  };
+
+  const formatPhoneNumber = (value) => {
+    if (!value) return '+7';
+    let phoneNumber = value.replace(/[^\d]+/g, '');
+
+    // Добавляем +7 по умолчанию, если номер начинается не с него
+    if (!phoneNumber.startsWith('7')) {
+      phoneNumber = '7' + phoneNumber;
+    }
+
+    let formattedNumber;
+    if (phoneNumber.length < 5) {
+      formattedNumber = `+7(${phoneNumber.slice(1)}`;
+    } else if (phoneNumber.length < 8) {
+      formattedNumber = `+7(${phoneNumber.slice(1, 4)})${phoneNumber.slice(4)}`;
+    } else if (phoneNumber.length < 11) {
+      formattedNumber = `+7(${phoneNumber.slice(1, 4)})${phoneNumber.slice(4, 7)}-${phoneNumber.slice(7)}`;
+    } else {
+      formattedNumber = `+7(${phoneNumber.slice(1, 4)})${phoneNumber.slice(4, 7)}-${phoneNumber.slice(7, 11)}`;
+    }
+
+    // Убираем лишние пробелы и тире, если они есть
+    return formattedNumber.replace(/-$/, '').replace(/\s+/g, '');
+  };
+
   return (
     <section className='discount'>
       <div className='discount__order-container'>
@@ -28,7 +40,6 @@ function Discount() {
         <span className='discount__title-text'>на первый заказ</span>
         <form
           className='discount__form'
-          //   onSubmit={handleSubmit}
           name='discount__form'
           onClick={(e) => e.stopPropagation()}>
           <input
@@ -38,21 +49,14 @@ function Discount() {
             type='tel'
             className='discount__input'
             placeholder={'+7'}
-            value={telephone} // Начальное значение
-            onChange={handleTelephoneChange}
-            // value={values.telephone || ''}
-            // onChange={handleChangeInput}
+            value={inputValue}
+            onChange={handleInput}
             autoComplete='on'
             pattern={patternTelephone}
-            // onFocus={handleFocus}
-            // error={errors.telephone}>
           ></input>
-          {/* <Error error={errors.telephone} /> */}
           <button
             type='submit'
-            className='discount__submit'
-            // disabled={!isValid || (serverError.isValid === true && serverError.text !== '')}>
-          >
+            className='discount__submit'>
             Получить скидку
           </button>
         </form>

@@ -3,6 +3,8 @@
     flex-direction:column;
     padding: 30px;
     margin: 0 auto;
+    max-width: 1920px;
+    align-items: center;
 }
 @media screen and (max-width: 1130px) {
     .header {
