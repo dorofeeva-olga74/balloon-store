@@ -1,7 +1,7 @@
 import React from 'react';
 
 function BalloonCard({ name, src, alt }) {
-  //   const location = useLocation();
+  
   return (
     <div className='card'>
       <img

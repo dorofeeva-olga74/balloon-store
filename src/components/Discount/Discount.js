@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 function Discount() {
-  const patternTelephone = '^\\+7\\(\\d{3}\\)\\d{3}-\\d{4}$';
+  const patternTelephone =
+    '^((8|\\+374|\\+994|\\+995|\\+375|\\+7|\\+380|\\+38|\\+996|\\+998|\\+993)[\\- ]?)?\\(?\\d{3,5}\\)?[\\- ]?\\d{1}[\\- ]?\\d{1}[\\- ]?\\d{1}[\\- ]?\\d{1}[\\- ]?\\d{1}(([\\- ]?\\d{1})?[\\- ]?\\d{1})?$';
   const [inputValue, setInputValue] = useState('+7');
 
   const handleInput = (e) => {
@@ -52,8 +53,7 @@ function Discount() {
             value={inputValue}
             onChange={handleInput}
             autoComplete='on'
-            pattern={patternTelephone}
-          ></input>
+            pattern={patternTelephone}></input>
           <button
             type='submit'
             className='discount__submit'>

@@ -2,8 +2,11 @@ import React, { useState, useRef, useEffect } from 'react';
 import BalloonCard from '../BalloonCard/BalloonCard';
 import BalloonCardAction from '../BalloonCardAction/BalloonCardAction';
 import balloons from '../../utils/balloons';
+import ourWorks from '../../utils/ourWorks';
+import OurWorksCard from '../OurWorksCard/OurWorksCard';
 
 function BalloonCardList({ subtitle }) {
+  // console.log(ourWorks);
   // Константа для задержки таймера
   const RESIZE_DELAY = 300;
 
@@ -62,25 +65,42 @@ function BalloonCardList({ subtitle }) {
     }
   };
 
+  const getOurWorksCountOnPage = (screenWidth) => {
+    if (screenWidth > 1822) {
+      return 7;
+    } else if (screenWidth > 1500) {
+      return 6;
+    } else if (screenWidth > 1024) {
+      return 4;
+    } else if (screenWidth > 320) {
+      return 3;
+    } else {
+      return 2;
+    }
+  };
+
   const [screenWidth, setScreenWidth] = useState(window.innerWidth); // ширина экрана
   const [topProductsCountOnPage, setTopProductsCountOnPage] = useState(getTopProductsCountOnPage(screenWidth)); // количество топпродуктов на странице при загрузке
-  const [topCategoriesCountOnPage, setTopCategoriesCountOnPage] = useState(getTopCategoriesCountOnPage(screenWidth)); // количество топпродуктов на странице при загрузке
+  const [topCategoriesCountOnPage, setTopCategoriesCountOnPage] = useState(getTopCategoriesCountOnPage(screenWidth)); // количество категорий на странице при загрузке
+  const [OurWorksCountOnPage, setOurWorksCountOnPage] = useState(getOurWorksCountOnPage(screenWidth)); // количество наших работ на странице
   // Сортируем все продукты по рейтингу и выбираем первые несколько в зависимости от разрешения экрана
   // let visibleProducts;
   // subtitle === 'Лидеры продаж'
   //   ? (visibleProducts = allProducts.sort((a, b) => b.productRating - a.productRating).slice(0, topProductsCountOnPage))
   //   : (visibleProducts = balloons.slice(0, topCategoriesCountOnPage));
   let visibleProducts;
-if (subtitle === 'Лидеры продаж') {
-  visibleProducts = allProducts.sort((a, b) => b.productRating - a.productRating).slice(0, topProductsCountOnPage);
-} else if (subtitle === 'Акции') {
-  visibleProducts = allProducts
-    .filter((product) => product.productAction && product.productAction.startDate)
-    .sort((a, b) => new Date(a.productAction.startDate) - new Date(b.productAction.startDate))
-    .slice(0, topProductsCountOnPage);
-} else {
-  visibleProducts = balloons.slice(0, topCategoriesCountOnPage);
-}
+  if (subtitle === 'Лидеры продаж') {
+    visibleProducts = allProducts.sort((a, b) => b.productRating - a.productRating).slice(0, topProductsCountOnPage);
+  } else if (subtitle === 'Акции') {
+    visibleProducts = allProducts
+      .filter((product) => product.productAction && product.productAction.startDate)
+      .sort((a, b) => new Date(a.productAction.startDate) - new Date(b.productAction.startDate))
+      .slice(0, topProductsCountOnPage);
+  } else if (subtitle === 'Наши работы') {
+    visibleProducts = ourWorks.slice(0, OurWorksCountOnPage);
+  } else {
+    visibleProducts = balloons.slice(0, topCategoriesCountOnPage);
+  }
   // console.log(visibleProducts);
 
   // создаю переменную для хранения идентификатора таймера
@@ -94,15 +114,19 @@ if (subtitle === 'Лидеры продаж') {
       const newTopProductsCountOnPage = getTopProductsCountOnPage(newScreenWidth);
       // получаю новое количество топКатегорий на странице
       const newTopCategoriesCountOnPage = getTopCategoriesCountOnPage(newScreenWidth);
+      // получаю новое количество нашихРабот на странице
+      const newOurWorksCountOnPage = getOurWorksCountOnPage(newScreenWidth);
       // если ширина экрана или количество продуктов на странице изменились, то обновляю состояние
       if (
         screenWidth !== newScreenWidth ||
         topProductsCountOnPage !== newTopProductsCountOnPage ||
-        topCategoriesCountOnPage !== newTopCategoriesCountOnPage
+        topCategoriesCountOnPage !== newTopCategoriesCountOnPage ||
+        OurWorksCountOnPage !== newOurWorksCountOnPage
       ) {
         setScreenWidth(newScreenWidth);
         setTopProductsCountOnPage(newTopProductsCountOnPage);
         setTopCategoriesCountOnPage(newTopCategoriesCountOnPage);
+        setOurWorksCountOnPage(newOurWorksCountOnPage);
       }
     };
     window.addEventListener('resize', () => {
@@ -116,11 +140,17 @@ if (subtitle === 'Лидеры продаж') {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [timerId, screenWidth, topProductsCountOnPage, topCategoriesCountOnPage]);
+  }, [timerId, screenWidth, topProductsCountOnPage, topCategoriesCountOnPage, OurWorksCountOnPage]);
 
   return (
     <section
-      className={`balloon__card-list ${subtitle === 'Лидеры продаж' || 'Акции' ? 'balloon__card-list_top-sales' : ''}`}>
+      className={`balloon__card-list ${
+        subtitle === 'Лидеры продаж' || subtitle === 'Акции'
+          ? 'balloon__card-list_top-sales'
+          : subtitle === 'Наши работы'
+          ? 'balloon__card-list_our-works'
+          : ''
+      }`}>
       {subtitle === 'Лидеры продаж' || subtitle === 'Акции'
         ? visibleProducts.map((product, index) => (
             <BalloonCardAction
@@ -139,6 +169,14 @@ if (subtitle === 'Лидеры продаж') {
               name={balloon.name}
               src={balloon.image}
               alt={balloon.name}
+            />
+          ))
+        : subtitle === 'Наши работы'
+        ? visibleProducts.map((ourWork) => (
+            <OurWorksCard
+              key={ourWork.id}
+              src={ourWork.image}
+              alt={ourWork.name}
             />
           ))
         : null}

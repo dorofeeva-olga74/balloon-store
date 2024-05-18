@@ -81,4 +81,7 @@ code {
 @import url(./components/BalloonCard/BalloonCard.css);
 @import url(./components/BalloonCardAction/BalloonCardAction.css);
 @import url(./components/Discount/Discount.css);
-@import url(./components/StockList/StockList.css);
+@import url(./components/OurWorksCard/OurWorksCard.css);
+/*footer*/
+@import url(./components/Footer/Footer.css);
+@import url(./components/CompanyContactInfo/CompanyContactInfo.css);

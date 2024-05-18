@@ -4,9 +4,11 @@ import Header from '../Header/Header';
 import HeaderTablet from '../HeaderTablet/HeaderTablet';
 import HeaderMobile from '../HeaderMobile/HeaderMobile';
 import Main from '../Main/Main';
+import Footer from '../Footer/Footer';
 
 function App() {
   const [isContextBurgerMenuOpened, setIsContextBurgerMenuOpened] = useState(false);
+  const [isFooter, setIsFooter] = useState(true);
   // const { width } = useWindowDimensions(); // Получаем ширину экрана
   // const isMobile = width < 768; // Условие для мобильных устройств
   // const isMobile = 'ontouchstart' in window; // Определение типа устройства
@@ -76,9 +78,10 @@ function App() {
         isOpen={isContextBurgerMenuOpened}
         setIsContextBurgerMenuOpened={setIsContextBurgerMenuOpened}
         onClose={closeAllPopups}
-        onCloseOverlay={handleOverlayClick}
+        onCloseOverlay={handleOverlayClick}        
       />
       <Main />
+      <Footer isFooter={isFooter} />
     </>  
   )
 }

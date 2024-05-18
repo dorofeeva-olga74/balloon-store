@@ -13,11 +13,22 @@
     grid-template-columns: repeat(auto-fill, minmax(248.78px, 1fr));   
     gap: 30.22px;    
 }
+.balloon__card-list_our-works{
+  /* display: flex;
+  flex-direction: row; */
+  display: grid;
+  justify-items: flex-start;
+  grid-template-columns: repeat(auto-fill, minmax(395px, 1fr));  
+  gap: 25px;
+  width: 100%;
+  /* width: 100% + 30px; */
+  overflow: hidden;
+  margin: 0 0 40px 30px; 
+}
 
 @media screen and (max-width:2181px) {   
     .balloon__card-list_top-sales { 
-        grid-template-columns: repeat(5, 1fr);
-        
+        grid-template-columns: repeat(5, 1fr);        
     }    
 }
 @media screen and (max-width:1823px) {

@@ -2,11 +2,12 @@
 import HeaderTop from '../HeaderTop/HeaderTop.js';
 import HeaderBottom from '../HeaderBottom/HeaderBottom.js';
 
-function Header() {
+function Header({isHeader}) {
+  
   return (
     <>
       <header className='header'>
-        <HeaderTop />
+        <HeaderTop isHeader={isHeader} />
         <HeaderBottom />
       </header>
     </>

@@ -1,0 +1,35 @@
+.contact-info {
+    max-width: 306px;
+    border-radius: 5px;
+    background-color: rgba(247, 247, 247, 1);
+    padding: 15px 40px 0 20px;
+    margin: 0 20px 0 0;
+}
+.contact-info__title {
+    display: flex;
+    margin: 0 auto 7px 0;
+    padding: 0;
+    align-items: center;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15.3px;
+    color: rgba(124, 124, 124, 1);
+    letter-spacing: 1px;  
+}
+.contact-info__subtitle {
+    display: flex;
+    margin: 0 auto 20px 0;
+    padding: 0;
+    align-items: center;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21.47px;
+    color: rgba(0, 0, 0, 1);
+    letter-spacing: 1px;
+}
+
+

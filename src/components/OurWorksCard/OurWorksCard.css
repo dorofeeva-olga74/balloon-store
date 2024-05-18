@@ -1,0 +1,21 @@
+.our-works-card {
+    max-width: 395px;
+    min-width: 215px;    
+    display: flex;    
+    box-sizing: border-box;
+    width: 100%;    
+}
+/* .our-works-card:last-child {   
+    /* width: 138.25px;     */
+    /* width: 50%; */
+/* } */ 
+
+.our-works-card__img {
+    width: 100%; 
+    aspect-ratio: 4/4;   
+    border-radius: 15px;
+    /* height: auto; */
+    max-height: 409px;
+    /* height: 100vh; */
+    object-fit: cover;
+}

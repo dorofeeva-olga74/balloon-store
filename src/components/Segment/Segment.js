@@ -7,19 +7,21 @@ function Segment({ subtitle, text }) {
     <section className='segment'>
       <div className='segment-set'>
         <h2 className='segment-subtitle'>{subtitle}</h2>
-        <nav className='segment__nav-box'>
-          <NavLink
-            to='/catalog'
-            className='segment__nav-link'>
-            {text}
-            <img
-              className='segment__rectangle'
-              src={SegmentRectangle}
-              alt='Угол направо'
-            />
-          </NavLink>          
-        </nav>
-      </div>      
+        {text === '' ? null : (
+          <nav className='segment__nav-box'>
+            <NavLink
+              to='/catalog'
+              className='segment__nav-link'>
+              {text}
+              <img
+                className='segment__rectangle'
+                src={SegmentRectangle}
+                alt='Угол направо'
+              />
+            </NavLink>
+          </nav>
+        )}
+      </div>
     </section>
   );
 }
