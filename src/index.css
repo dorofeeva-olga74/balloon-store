@@ -85,3 +85,4 @@ code {
 /*footer*/
 @import url(./components/Footer/Footer.css);
 @import url(./components/CompanyContactInfo/CompanyContactInfo.css);
+@import url(./components/FooterMobile/FooterMobile.css);

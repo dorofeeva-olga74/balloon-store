@@ -33,6 +33,11 @@
         width: 25px;
         height: 25px;              
     }
+    .social-media__footer {
+        width: 30px;
+        height: 30px;
+        margin: 0 15px 0 15px;
+    }
 }
 @media screen and (max-width: 680px) {
     .social-media {       
@@ -43,5 +48,5 @@
 @media screen and (max-width: 660px) {
     .social-media {       
         display: none;             
-    }
+    }   
 }

@@ -1,10 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-function SocialMediaImg({src}) {
+function SocialMediaImg({ src, isFooter }) {
   return (
-    <section className='social-media'>
-      <nav className='social-media__nav-box'>        
+    // <section className='social-media'>
+    <section className={`${isFooter ? 'social-media__footer' : 'social-media'}`}>
+      <nav className='social-media__nav-box'>
         <NavLink
           to='/instagram'
           className='social-media__nav'>

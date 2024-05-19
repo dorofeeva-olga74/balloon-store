@@ -5,10 +5,11 @@ import HeaderTablet from '../HeaderTablet/HeaderTablet';
 import HeaderMobile from '../HeaderMobile/HeaderMobile';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
+import FooterMobile from '../FooterMobile/FooterMobile';
 
 function App() {
   const [isContextBurgerMenuOpened, setIsContextBurgerMenuOpened] = useState(false);
-  const [isFooter, setIsFooter] = useState(true);
+  // const [isFooter, setIsFooter] = useState(true);
   // const { width } = useWindowDimensions(); // Получаем ширину экрана
   // const isMobile = width < 768; // Условие для мобильных устройств
   // const isMobile = 'ontouchstart' in window; // Определение типа устройства
@@ -41,7 +42,7 @@ function App() {
     }
   }, [isSomePopupOpen]);
 
-  return ( 
+  return (
     // <>
     //   {isMobile ? (
     //     // Рендерим HeaderMobile, если ширина экрана соответствует мобильному устройству
@@ -60,30 +61,31 @@ function App() {
     //       onCloseOverlay={handleOverlayClick}
     //     />
     //   )}
-    // </>     
+    // </>
     <>
       <HeaderMobile
         isOpen={isContextBurgerMenuOpened}
         setIsContextBurgerMenuOpened={setIsContextBurgerMenuOpened}
         onClose={closeAllPopups}
         onCloseOverlay={handleOverlayClick}
-      /> 
+      />
       <HeaderTablet
         isOpen={isContextBurgerMenuOpened}
         setIsContextBurgerMenuOpened={setIsContextBurgerMenuOpened}
         onClose={closeAllPopups}
         onCloseOverlay={handleOverlayClick}
-      />      
+      />
       <Header
         isOpen={isContextBurgerMenuOpened}
         setIsContextBurgerMenuOpened={setIsContextBurgerMenuOpened}
         onClose={closeAllPopups}
-        onCloseOverlay={handleOverlayClick}        
+        onCloseOverlay={handleOverlayClick}
       />
       <Main />
-      <Footer isFooter={isFooter} />
-    </>  
-  )
+      <Footer isFooter={true} />
+      <FooterMobile isFooter={true}/>
+    </>
+  );
 }
 
 export default App;

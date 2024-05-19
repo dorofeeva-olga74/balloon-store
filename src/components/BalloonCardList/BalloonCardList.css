@@ -141,5 +141,8 @@
 @media screen and (max-width:379px) {
     .balloon__card-list {
         grid-template-columns: repeat(1, 4fr);        
+    }
+    .balloon__card-list_our-works {
+       margin: 0 15px 0 15px;
     }    
 }

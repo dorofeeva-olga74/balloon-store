@@ -46,3 +46,34 @@
     line-height: 20.88px;
     color: rgba(94, 94, 94, 1);  
 }
+@media screen and (max-width: 1290px) {
+    .footer__contact {        
+        font-size: 30px;       
+        line-height: 38.36px;              
+    }
+    .footer__text {        
+        font-size: 16px;        
+        line-height: 19.47px;
+        margin: 0;      
+    }   
+}
+@media screen and (max-width: 1070px) {
+    .footer__contact {        
+        font-size: 25px;       
+        line-height:33.36px;              
+    }
+    .footer__text {        
+        font-size: 14px;        
+        line-height: 17.47px;              
+    }   
+}
+@media screen and (max-width: 892px) {
+    .footer__contacts-set {        
+        display: none;            
+    }    
+}
+@media screen and (max-width: 768px) {
+    .footer {        
+        display: none;            
+    }    
+}
