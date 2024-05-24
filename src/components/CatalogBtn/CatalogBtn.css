@@ -1,7 +1,7 @@
 .catalog-btn {    
     height: 49px;
-    margin: 0 auto;
-    padding: 15px;
+    margin: 0;
+    padding: 15px 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -23,51 +23,51 @@
 .catalog-btn:hover{
     opacity: 0.8;
 }
-@media screen and (max-width: 909px) {
+
+.catalog-burgen-img {
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 1165px) {
     .catalog-btn {         
-        padding: 14px 15px 15px 15px;        
+        padding: 15px;            
+    }
+}
+
+@media screen and (max-width: 909px) {
+    .catalog-btn {              
         font-size: 14px;        
         line-height: 17px;        
     }
 }
-@media screen and (max-width: 781px) {
+
+@media screen and (max-width:850px) { 
     .catalog-btn {        
-        padding: 14px 15px 15px 15px;
-        font-size: 12px;              
+        height: 42px;       
     }
-    
 }
-@media screen and (max-width: 768px) {
-    .catalog-btn {        
-        padding: 15px 50px;        
-        font-size: 16px;        
-        line-height: 19.5px;
-        margin: 0 auto;                   
+
+@media screen and (max-width: 781px) {
+    .catalog-btn {       
+        font-size: 12px;              
     }    
 }
+
+@media screen and (max-width: 768px) {
+    .catalog-btn {        
+        font-size: 16px;        
+        line-height: 19.5px;
+        margin: 0;                   
+    }    
+}
+
 @media screen and (max-width: 580px) {
-    .catalog-btn {         
-        padding: 15px 30px;
+    .catalog-btn {       
         font-size: 14px;        
         line-height: 17px;                    
     }    
 }
-@media screen and (max-width: 540px) {
-    .catalog-btn {         
-        padding: 15px;                    
-    }    
-}
-@media screen and (max-width: 500px) {
-    .catalog-btn {    
-       padding: 15px 30px;
-       margin: 0 0 0 auto;                   
-    }    
-}
-@media screen and (max-width: 425px) {
-    .catalog-btn {       
-       padding: 15px;                   
-    }    
-}
+
 @media screen and (max-width: 400px) {
     .catalog-btn {       
        display: none;                 

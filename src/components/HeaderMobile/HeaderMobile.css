@@ -37,13 +37,13 @@
 .header-mobile__bottom {
    display: flex;
    flex-direction: row;   
-   margin: 0;
-   /* width: 100%; */
+   margin: 0;   
 }
 .header-mobile__set {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
     margin: 0;
     width: 100%;    
 }
@@ -73,8 +73,11 @@
 
 @media screen and (max-width: 500px) {
     .header-mobile {
-        display:flex;
-        align-items: center;        
+        display: flex;       
+    }
+    .header-mobile__sections {
+        margin:0 0 0 15px;
+        padding: 15px 60px;       
     }
     .header-mobile__button {
         width: 48px;
@@ -82,14 +85,16 @@
         margin: 5px 0 5px 5px;        
    }
    .header-mobile__rectangle {
-    margin-left: auto;
+        margin: 0 0 0 auto;
    }
 }
-
-@media screen and (max-width: 400px) {
-    .header-mobile__sections {
-        margin: 15px 0 15px 15px;
-        padding: 15px 10px;      
-    }
+@media screen and (max-width: 414px) {
+    .header-mobile__sections {        
+        padding: 15px 30px;       
+    }    
 }
-
+@media screen and (max-width: 355px) {
+    .header-mobile__sections {        
+        padding: 15px;       
+    }    
+}

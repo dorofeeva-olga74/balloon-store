@@ -9,6 +9,11 @@
     margin: 0;
     padding: 0;
 }
+.shopping-cart__nav {
+    width: 30px;
+    height: 30px;    
+    transition: opasity 0.2s ease;
+}
 .shopping-cart__img {    
     width: 30px;
     height: 30px;        
@@ -19,7 +24,7 @@
         height: 25px;        
     }
 }
-@media screen and (max-width: 773px) {
+/*@media screen and (max-width: 773px) {
     .shopping-cart__img {    
         width: 20px;
         height: 20px;        
@@ -31,4 +36,4 @@
         width: 18px;
         height:18px;       
     }    
-}
+} */

@@ -1,4 +1,4 @@
-import BurgerMenu from '../BurgerMenu/BurgerMenu.js';
+// import BurgerMenu from '../BurgerMenu/BurgerMenu.js';
 import CatalogBtn from '../CatalogBtn/CatalogBtn.js';
 import SearchForm from '../SearchForm/SearchForm.js';
 import SearchMobile from '../../images/icons-search-mobile.svg';
@@ -6,9 +6,9 @@ import ShoppingCart from '../ShoppingCart/ShoppingCart.js';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 import Actions from '../../images/Vector.svg';
 import Logo from '../Logo/Logo.js';
-// import HeaderSectionsBottom from '../HeaderSectionsBottom/HeaderSectionsBottom.js';
-import Rectangle from '../../images/Rectangle.svg';
-import HeaderSection from '../HeaderSection/HeaderSection.js';
+import HeaderSectionsBottom from '../HeaderSectionsBottom/HeaderSectionsBottom.js';
+// import Rectangle from '../../images/Rectangle.svg';
+// import HeaderSection from '../HeaderSection/HeaderSection.js';
 import Contacts from '../Contacts/Contacts';
 import Hours from '../Hours/Hours';
 
@@ -17,12 +17,15 @@ function HeaderTablet({ title, to }) {
     <>
       <header className='header-tablet'>
         <div className='header-tablet__top'>
-          <BurgerMenu />
-          <CatalogBtn />
-          <SearchForm
-            src={SearchMobile}
-            placeholder={'Поиск по сайту'}
-          />
+          {/* <BurgerMenu /> */}
+          <Logo />
+          <div className='header-tablet__catalog-set header-top__catalog-set'>
+            <CatalogBtn />
+            <SearchForm
+              src={SearchMobile}
+              placeholder={'Поиск по сайту'}
+            />
+          </div>
           <button className='header-tablet__button'>
             <nav className='header-tablet__nav-box'>
               <RouterNavLink
@@ -42,23 +45,22 @@ function HeaderTablet({ title, to }) {
           </button>
         </div>
         <div className='header-tablet__bottom'>
-          <Logo />
-          <div className='header-tablet__set'>
+          {/* <div className='header-tablet__set'>
             <img
               className='header-tablet__rectangle'
               src={Rectangle}
               alt='Угол вниз'
-            />
-            {/* <div className='header-mobile__sections'>
+            /> */}
+            {/* <div className='header-mobile__sections'> */}
               <HeaderSectionsBottom />
-            </div> */}
-            <nav className='sections__nav-box'>
+            {/* </div> */}
+            {/* <nav className='sections__nav-box'>
               <HeaderSection
                 title='Латексные шары'
                 to='/latex-balloons'
               />
             </nav>
-          </div>
+          </div> */}
           <Contacts />
           <Hours />
         </div>

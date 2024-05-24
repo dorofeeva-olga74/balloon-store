@@ -1,12 +1,29 @@
-.sections {
+.sections-top {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 0;  
-    justify-content: space-around;
+    margin: 0 20px;  
+    justify-content: space-around;    
+}
+.sections-top__nav-box {
+    display: flex;
+    gap: 40px;
+}
+@media screen and (max-width: 1076px) {
+    .sections-top__nav-box {        
+        gap: 20px;
+    }
+}
+@media screen and (max-width: 1010px) {
+    .sections-top {
+        margin: 0 10px;  
+    }
+    .sections-top__nav-box {        
+        gap: 10px;
+    }
 }
 @media screen and (max-width: 768px) {
-    .sections {
+    .sections-top {
         display: none;       
     }
 }

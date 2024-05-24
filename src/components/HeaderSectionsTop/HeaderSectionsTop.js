@@ -3,8 +3,8 @@ import HeaderSection from '../HeaderSection/HeaderSection';
 
 function HeaderSectionsTop({ title, to }) {
   return (
-    <section className='sections'>
-      <nav className='sections__nav-box'>
+    <section className='sections-top'>
+      <nav className='sections-top__nav-box'>
         <HeaderSection
           title='Акции'
           to='/promotions'          

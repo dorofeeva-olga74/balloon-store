@@ -7,73 +7,54 @@
     display: flex;
     align-items: flex-start;
     text-align: center;
-    margin-right: 40px;
+    margin-right:0;
     text-decoration: none;
     font-family: 'Inter', 'Arial', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 20.8px;
-    color: #000000; 
+    color: #000000;
+    transition: color 0.3s ease; 
 }
+
+.sections__nav:hover {    
+    color: #EB8D90;
+}
+
 .sections__nav-action {
     color: #FC42FF;
 }
-@media screen and (max-width: 1350px) {
-    .sections__nav {
-        margin-right: 30px;        
-    }
+.sections__nav-action:hover {    
+    color: #EB8D90;
 }
-@media screen and (max-width: 1256px) {
-    .sections__nav {
-        margin-right: 24px;       
-        font-size: 14px;        
-        line-height: 17.07px;        
-    }
-}
-@media screen and (max-width: 1028px) {
-    .sections__nav {
-        margin-right: 15px;       
+
+@media screen and (max-width: 850px) {
+    .sections__nav {        
         font-size: 12px;        
         line-height: 17.07px;        
     }
 }
-@media screen and (max-width: 805px) {
+@media screen and (max-width: 500px) {
     .sections__nav {
-        margin-right: 15px;       
-        font-size: 11px;        
+        font-size: 14px;     
+        line-height: 18.8px;        
+    }
+}
+@media screen and (max-width: 290px) {
+    .sections__nav {
+        font-size: 12px;     
         line-height: 17.07px;        
     }
 }
-@media screen and (max-width: 773px) {
-    .sections__nav {
-        margin-right: 10px;             
+
+@media screen and (max-width: 580px) {
+    .sections__nav-box:last-child {
+        display: none;        
     }
 }
-@media screen and (max-width: 768px) {
-    .sections__nav {
-        margin: 0 20px 0 15px;        
-        font-size: 16px;        
-        line-height: 20.8px;       
+@media screen and (max-width: 500px) {
+    .sections__nav-box:first-child {
+        display: flex;        
     }
-}
-@media screen and (max-width: 726px) {
-    .sections__nav {
-        margin: 0 15px 0 10px;        
-        font-size: 14px;
-        line-height: 17.07px;        
-    }
-}
-@media screen and (max-width: 600px) {
-    .sections__nav {                
-        font-size: 12px;
-        line-height: 15.5px;      
-    }
-}
-/* @media screen and (max-width: 500px) {
-    .sections__nav {
-      margin-right: 0;      
-      font-size: 14px;      
-      text-align: center;             
-    }
-}      */
+} 

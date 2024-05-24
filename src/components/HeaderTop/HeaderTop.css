@@ -5,3 +5,9 @@
     align-items: center;
     margin: 0;
 }
+.header-top__catalog-set {
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    width: 100%;
+}

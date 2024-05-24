@@ -1,18 +1,7 @@
-/* .logo { */
-    /* width: 76px;
-    height: 33px;
-    margin: 32px 30px 32px 0;
-    padding: 10px; */
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center;
-    box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.08); */
-/* } */
-
 .logo-header {
     width: 76px;
     height: 33px;
-    margin: 32px 30px 32px 0;
+    margin: 0 20px 0 0;
     padding: 10px; 
     display: flex;
     flex-direction: row;
@@ -30,44 +19,36 @@
     box-shadow: 0px 3px 14px 0px rgba(251, 251, 251, 1);   
 }
 
-.logo:hover{
+.logo-header:hover{
     opacity: 0.8;
 }
-@media screen and (max-width: 937px) {
+
+.logo-footer:hover{
+    opacity: 0.8;
+}
+@media screen and (max-width: 972px) {
     .logo-header {
         width: 58px;        
-        margin: 22px 20px 22px 0;        
+        margin: 0 15px 0 0;        
     }
 } 
-
-@media screen and (max-width: 780px) {
-    .logo-header {      
-      margin: 22px 10px 22px 15px;            
-    }
-}
-@media screen and (max-width: 768px) {
-    .logo-header {                
-        margin: 17px 25px 17px 0;        
-    }
-}
-@media screen and (max-width: 768px) {
-    .logo-header {                
-        margin: 17px 15px 17px 0;        
-    }
-}
-@media screen and (max-width: 528px) {
+@media screen and (max-width: 850px) {
     .logo-header {
-        width: 153px;            
+        height: 25px;                
+    }
+} 
+@media screen and (max-width: 768px) {
+    .logo-header {      
+        margin: 0 5px 0 0;           
     }
 }
 @media screen and (max-width: 500px) {
-    .logo-header {         
-      margin: 10px 15px 15px 0;
-      width: 58px;           
+    .logo-header {                
+        padding: 10px 30px;        
     }
 }
-@media screen and (max-width: 400px) {
-    .logo-header {       
-        width: 95px;
+@media screen and (max-width: 340px) {
+    .logo-header {                
+        padding: 10px 20px;      
     }
 }

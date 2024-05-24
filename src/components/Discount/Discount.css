@@ -4,7 +4,8 @@
   background-size: cover; 
   background-repeat: no-repeat; 
   background-position: left;
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
+  max-width: 100%;
 }
 
 .discount__order-container {

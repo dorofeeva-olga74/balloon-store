@@ -3,11 +3,11 @@ import HeaderSection from '../HeaderSection/HeaderSection';
 
 function HeaderSectionsBottom({ title, to }) {
   return (
-    <section className='sections'>
-      <nav className='sections__nav-box'>
+    <section className='sections-bootom'>
+      <nav className='sections-bootom__nav-box'>
         <HeaderSection
           title='Латексные шары'
-          to='/latex-balloons'          
+          to='/latex-balloons'
         />
         <HeaderSection
           title='Фольгированные шары'

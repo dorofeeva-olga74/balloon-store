@@ -1,13 +1,38 @@
-.sections {
+.sections-bootom {
     display: flex;
     flex-direction: row;    
     align-items: center;
-    margin: 2.5px 0 7px 0;  
-    justify-content: space-around;
+    margin: 0;    
+    justify-content: space-between;
 }
-@media screen and (max-width: 768px) {
-    .sections {
-        max-width: 180px;
-        flex-wrap: wrap;         
+
+.sections-bootom__nav-box {
+    display: flex;
+    gap: 40px;
+}
+
+@media screen and (max-width: 1265px) {
+    .sections-bootom__nav-box {        
+        justify-content: space-between;
+        width: 100%;
     }
+}
+
+@media screen and (max-width: 1003px) {
+    .sections-bootom {
+       width: 100%;
+       margin: 0 15px;
+    }  
+}
+
+@media screen and (max-width: 650px) {
+    .sections-bootom__nav-box {        
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 565px) {
+    .sections-bootom__nav-box {        
+        gap: 10px;
+    }    
 }

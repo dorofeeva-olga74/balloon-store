@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     /* align-items: center; */
-    margin: 0 25px 0 33px;
+    margin: 0 20px;
 }
 .contacts__tel-box {
     display: flex;
@@ -25,13 +25,12 @@
     padding: 0;
     margin: 5px 25px 5px 10px;
 }
-@media screen and (max-width: 1256px) {
-    .contacts__tel-number {        
-        font-size: 14px;
-        line-height: 17.07px;            
+@media screen and (max-width: 1265px) {
+    .contacts__set {        
+        display: none;
     }
 }
-@media screen and (max-width: 1143px) {
+/* @media screen and (max-width: 1143px) {
     .contacts__tel-number {        
         font-size: 12px;
         line-height: 15.07px;            
@@ -90,4 +89,4 @@
     .contacts__set {       
         display:none;
     }
-}
+} */

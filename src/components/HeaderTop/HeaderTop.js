@@ -9,15 +9,17 @@ function HeaderTop() {
   return (
     <div className='header-top'>
       <Logo />
-      <CatalogBtn />
-      <SearchForm
-        src={Search}
-        placeholder={'Поиск'}
-      />
+      <div className='header-top__catalog-set'>
+        <CatalogBtn />
+        <SearchForm
+          src={Search}
+          placeholder={'Поиск'}
+        />
+      </div>
       <HeaderSectionsTop />
-      <button className='header-mobile__button'>
-        <ShoppingCart />
-      </button>
+      {/* <button className='header-mobile__button'> */}
+      <ShoppingCart />
+      {/* </button> */}
     </div>
   );
 }

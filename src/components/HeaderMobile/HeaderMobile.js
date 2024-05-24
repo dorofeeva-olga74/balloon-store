@@ -2,11 +2,9 @@ import BurgerMenu from '../BurgerMenu/BurgerMenu.js';
 import SearchForm from '../SearchForm/SearchForm.js';
 import SearchMobile from '../../images/icons-search-mobile.svg';
 import ShoppingCart from '../ShoppingCart/ShoppingCart.js';
-import CatalogBtn from '../CatalogBtn/CatalogBtn.js';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 import Actions from '../../images/Vector.svg';
 import Logo from '../Logo/Logo.js';
-// import HeaderSectionsBottom from '../HeaderSectionsBottom/HeaderSectionsBottom.js';
 import Rectangle from '../../images/Rectangle.svg';
 import HeaderSection from '../HeaderSection/HeaderSection.js';
 
@@ -54,10 +52,6 @@ function HeaderMobile({ title, to }) {
                 />
               </nav>
             </div>
-            {/* <div className='header-mobile__sections'>
-              <HeaderSectionsBottom />
-            </div> */}
-            <CatalogBtn />
           </div>
         </div>
       </header>

@@ -29,7 +29,7 @@ function Main() {
           subtitle={'Наши работы'}
           text={''}
         />
-        <BalloonCardList subtitle={'Наши работы'} />
+        {/* <BalloonCardList subtitle={'Наши работы'} /> */}
       </main>
     </>
   );
