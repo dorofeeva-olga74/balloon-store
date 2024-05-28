@@ -1,5 +1,4 @@
-.card {
-    max-width: 329px;   
+.card {    
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -8,7 +7,7 @@
 
 .card__img {
     width: 100%;
-    aspect-ratio: 3/4;   
+    /* aspect-ratio: 3/4;    */
     border-radius: 7px;
     height: auto;
     object-fit: cover;
@@ -21,35 +20,30 @@
     align-items: center;
     
 }
-
-.card__title {
-    display: flex;
-    color: #000000;
-    font-family: 'Inter', 'Arial', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 20.8px;
-    margin: 15px auto 0 auto;
-    text-align:center;
-    padding: 0;
-    letter-spacing: 2px;    
-}
-
 .card__title-product {
     display: block;
     max-width: 90%; /* Максимальная ширина блока */
     /* overflow-wrap: break-word; Переносит длинные слова на новую строку */    
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden; 
+    overflow: hidden;
+    color: rgba(58, 58, 58, 1);
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20.8px;
+    margin-top: 0;
+    text-align:center;
+    padding: 0;
+    letter-spacing: 2px;   
 }
 
 .card__price-section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 15px 0 10px 0;
+    margin: 15px 0 2px 0;
 }
 .card__price-action {
     display: flex;
@@ -62,23 +56,24 @@
     margin: 0 auto;
     text-align:center;
     padding: 0;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 .card__price-action::after {
     content: "p";
 }
 .card__price {
     display: flex;
+    align-items: flex-end;
+    margin: 0 auto 3px auto;
     color:  #8B8B8B;
     font-family: 'Inter', 'Arial', sans-serif;
     font-size: 10px;
     font-style: normal;
     font-weight: 500;
-    line-height: 13px;
-    margin: 0 auto;
+    line-height: 13px;    
     text-align:center;
     padding: 0;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-decoration-line: line-through; /*зачеркивание текста*/
     text-decoration-color: #8B8B8B; /* Цвет зачеркивания */    
 }
@@ -87,141 +82,25 @@
 }
 .card__product-action {
     display: flex;
+    align-items: flex-end;
+    margin: 0 auto 3px auto;
     color: #FF32A1;
     font-family: 'Inter', 'Arial', sans-serif;
     font-size: 10px;
     font-style: normal;
     font-weight: 600;
-    line-height: 13px;
-    margin: 0 auto;
+    line-height: 13px;    
     text-align:center;
     padding: 0;
-    letter-spacing: 2px; 
+    letter-spacing: 1px; 
 }
 .card__product-action::after {
     content: "%";
 }
-@media screen and (max-width: 1823px) {
-    .card {
-        max-width: 394px;           
-    }
-}
-@media screen and (max-width: 1710px) {
-    .card {
-        max-width: 356px;           
-    }
-}
-@media screen and (max-width: 1587px) {
-    .card {
-        max-width: 329px;           
-    }
-    .card__action {
-        max-width: 248.78px;  
-    }
-}
-@media screen and (max-width: 1403px) {    
-    .card__action {
-        max-width: 230px;  
-    }
-}
-@media screen and (max-width: 1308px) {    
-    .card__action {
-        max-width: 285px;  
-    }
-}
-@media screen and (max-width: 1290px) {    
-    .card__action {
-        max-width: 210px;  
-    }
-}
-@media screen and (max-width: 1195px) {    
-    .card__action {
-        max-width: 190px;  
-    }
-}
-@media screen and (max-width: 1090px) {    
-    .card__action {
-        max-width: 210px;  
-    }
-}
-@media screen and (max-width: 957px) {
-    .card {
-        max-width: 200px;           
-    }
-    .card__action {
-        max-width: 195px;  
-    }
-}
-@media screen and (max-width: 903px) {    
-    .card__action {
-        max-width: 236px;  
-    }
-}
-@media screen and (max-width: 903px) {    
-    .card__action {
-        max-width: 175px;  
-    }
-}
-@media screen and (max-width: 814px) {    
-    .card__action {
-        max-width: 225px;  
-    }
-}
 
-@media screen and (max-width: 768px) {
-    .card {
-        max-width: 205px;           
-    }
-    .card__action {
-        max-width: 157px;  
-    }
-    .card__title {
-        font-size: 14px;        
-        line-height: 18.2px;
-        margin: 15px auto 0 auto;       
-        letter-spacing: 2px;
+@media screen and (max-width: 768px) {    
+    .card__title-product {
+        font-size: 12px;        
+        line-height: 15.6px;      
     }
 } 
-@media screen and (max-width: 745px) {    
-    .card__action {
-        max-width: 185px;  
-    }
-}
-@media screen and (max-width: 650px) {    
-    .card__action {
-        max-width: 175px;  
-    }
-}
-@media screen and (max-width: 600px) {    
-    .card__action {
-        max-width: 236px;  
-    }
-}
-@media screen and (max-width: 550px) {
-    .card {
-        max-width: 235px;           
-    }
-}
-@media screen and (max-width: 524px) {
-    .card {
-        max-width: 220px;           
-    }
-}
-@media screen and (max-width: 492px) {
-    .card {
-        max-width: 200px;           
-    }
-}
-@media screen and (max-width: 430px) {
-    .card {
-        max-width: 163px;           
-    }
-}
-@media screen and (max-width: 379px) {
-    .card {
-        max-width: 329px;           
-    }
-    .card__action {
-        max-width: 287px;  
-    }
-}

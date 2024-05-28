@@ -25,6 +25,21 @@ const ourWorks = [
     name: 'Композиция шаров на свадьбу',
     image: require('../images/our-works/Our-works3.png'),
   },
+  {
+    id: 6,
+    name: 'Композиция на юбилей',
+    image: require('../images/our-works/Our-works4.png'),
+  },
+  {
+    id: 7,
+    name: 'Композиция шаров на рождение ребенка',
+    image: require('../images/our-works/Our-works5.png'),
+  },
+  {
+    id: 8,
+    name: 'Композиция шаров на свадьбу',
+    image: require('../images/our-works/Our-works6.png'),
+  },
 ];
 
 export default ourWorks;

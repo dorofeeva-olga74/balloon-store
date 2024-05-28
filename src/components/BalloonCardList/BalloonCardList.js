@@ -3,10 +3,9 @@ import BalloonCard from '../BalloonCard/BalloonCard';
 import BalloonCardAction from '../BalloonCardAction/BalloonCardAction';
 import balloons from '../../utils/balloons';
 import ourWorks from '../../utils/ourWorks';
-import OurWorksCard from '../OurWorksCard/OurWorksCard';
+// import OurWorksCard from '../OurWorksCard/OurWorksCard';
 
 function BalloonCardList({ subtitle }) {
-  // console.log(ourWorks);
   // Константа для задержки таймера
   const RESIZE_DELAY = 300;
 
@@ -20,48 +19,34 @@ function BalloonCardList({ subtitle }) {
   const allProducts = filteredAndCopiedBalloons.flatMap((balloon) => balloon.products);
 
   const getTopCategoriesCountOnPage = (screenWidth) => {
-    if (screenWidth > 1822) {
-      return 12;
-    } else if (screenWidth > 1500) {
-      return 10;
-    } else if (screenWidth > 1024) {
+    if (screenWidth > 768) {
       return 8;
-    } else if (screenWidth > 958) {
+    } else {
       return 6;
+    }
+  };
+
+  const getTopProductsCountOnPage = (screenWidth) => {
+    if (screenWidth > 1104) {
+      return 5;
     } else if (screenWidth > 768) {
-      return 8;
-    } else if (screenWidth > 320) {
-      return 6;
+      return 4;
+    } else if (screenWidth > 550) {
+      return 3;
     } else {
       return 4;
     }
   };
 
-  const getTopProductsCountOnPage = (screenWidth) => {
-    if (screenWidth > 2181) {
-      return 6;
-    } else if (screenWidth > 1823) {
+  const getSaleProductsCountOnPage = (screenWidth) => {
+    if (screenWidth > 1104) {
       return 5;
-    } else if (screenWidth > 1587) {
-      return 4;
-    } else if (screenWidth > 1308) {
-      return 5;
-    } else if (screenWidth > 1290) {
-      return 4;
-    } else if (screenWidth > 1090) {
-      return 5;
-    } else if (screenWidth > 814) {
-      return 4;
     } else if (screenWidth > 768) {
-      return 6;
-    } else if (screenWidth > 744) {
       return 4;
-    } else if (screenWidth > 653) {
-      return 6;
-    } else if (screenWidth > 600) {
+    } else if (screenWidth > 550) {
       return 3;
     } else {
-      return 4;
+      return 2;
     }
   };
 
@@ -80,14 +65,12 @@ function BalloonCardList({ subtitle }) {
   };
 
   const [screenWidth, setScreenWidth] = useState(window.innerWidth); // ширина экрана
-  const [topProductsCountOnPage, setTopProductsCountOnPage] = useState(getTopProductsCountOnPage(screenWidth)); // количество топпродуктов на странице при загрузке
+
   const [topCategoriesCountOnPage, setTopCategoriesCountOnPage] = useState(getTopCategoriesCountOnPage(screenWidth)); // количество категорий на странице при загрузке
+  const [topProductsCountOnPage, setTopProductsCountOnPage] = useState(getTopProductsCountOnPage(screenWidth)); // количество топпродуктов на странице при загрузке
+  const [saleProductsCountOnPage, setSaleProductsCountOnPage] = useState(getSaleProductsCountOnPage(screenWidth)); // количество акционных продуктов на странице при загрузке
   const [OurWorksCountOnPage, setOurWorksCountOnPage] = useState(getOurWorksCountOnPage(screenWidth)); // количество наших работ на странице
-  // Сортируем все продукты по рейтингу и выбираем первые несколько в зависимости от разрешения экрана
-  // let visibleProducts;
-  // subtitle === 'Лидеры продаж'
-  //   ? (visibleProducts = allProducts.sort((a, b) => b.productRating - a.productRating).slice(0, topProductsCountOnPage))
-  //   : (visibleProducts = balloons.slice(0, topCategoriesCountOnPage));
+
   let visibleProducts;
   if (subtitle === 'Лидеры продаж') {
     visibleProducts = allProducts.sort((a, b) => b.productRating - a.productRating).slice(0, topProductsCountOnPage);
@@ -95,13 +78,12 @@ function BalloonCardList({ subtitle }) {
     visibleProducts = allProducts
       .filter((product) => product.productAction && product.productAction.startDate)
       .sort((a, b) => new Date(a.productAction.startDate) - new Date(b.productAction.startDate))
-      .slice(0, topProductsCountOnPage);
+      .slice(0, saleProductsCountOnPage);
   } else if (subtitle === 'Наши работы') {
     visibleProducts = ourWorks.slice(0, OurWorksCountOnPage);
   } else {
     visibleProducts = balloons.slice(0, topCategoriesCountOnPage);
   }
-  // console.log(visibleProducts);
 
   // создаю переменную для хранения идентификатора таймера
   const timerId = useRef(null);
@@ -114,6 +96,8 @@ function BalloonCardList({ subtitle }) {
       const newTopProductsCountOnPage = getTopProductsCountOnPage(newScreenWidth);
       // получаю новое количество топКатегорий на странице
       const newTopCategoriesCountOnPage = getTopCategoriesCountOnPage(newScreenWidth);
+      // получаю новое количество акционныхПродуктов на странице
+      const newSaleProductsCountOnPage = getSaleProductsCountOnPage(newScreenWidth);
       // получаю новое количество нашихРабот на странице
       const newOurWorksCountOnPage = getOurWorksCountOnPage(newScreenWidth);
       // если ширина экрана или количество продуктов на странице изменились, то обновляю состояние
@@ -121,11 +105,13 @@ function BalloonCardList({ subtitle }) {
         screenWidth !== newScreenWidth ||
         topProductsCountOnPage !== newTopProductsCountOnPage ||
         topCategoriesCountOnPage !== newTopCategoriesCountOnPage ||
+        saleProductsCountOnPage !== newSaleProductsCountOnPage ||
         OurWorksCountOnPage !== newOurWorksCountOnPage
       ) {
         setScreenWidth(newScreenWidth);
         setTopProductsCountOnPage(newTopProductsCountOnPage);
         setTopCategoriesCountOnPage(newTopCategoriesCountOnPage);
+        setSaleProductsCountOnPage(newSaleProductsCountOnPage);
         setOurWorksCountOnPage(newOurWorksCountOnPage);
       }
     };
@@ -140,7 +126,14 @@ function BalloonCardList({ subtitle }) {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [timerId, screenWidth, topProductsCountOnPage, topCategoriesCountOnPage, OurWorksCountOnPage]);
+  }, [
+    timerId,
+    screenWidth,
+    topProductsCountOnPage,
+    topCategoriesCountOnPage,
+    OurWorksCountOnPage,
+    saleProductsCountOnPage,
+  ]);
 
   return (
     <section
@@ -171,15 +164,15 @@ function BalloonCardList({ subtitle }) {
               alt={balloon.name}
             />
           ))
-        : subtitle === 'Наши работы'
-        ? visibleProducts.map((ourWork) => (
-            <OurWorksCard
-              key={ourWork.id}
-              src={ourWork.image}
-              alt={ourWork.name}
-            />
-          ))
-        : null}
+        : // : subtitle === 'Наши работы'
+          // ? visibleProducts.map((ourWork) => (
+          //     <OurWorksCard
+          //       key={ourWork.id}
+          //       src={ourWork.image}
+          //       alt={ourWork.name}
+          //     />
+          //   ))
+          null}
     </section>
   );
 }

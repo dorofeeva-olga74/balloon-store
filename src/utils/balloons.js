@@ -110,7 +110,7 @@ const balloons = [
   },
   {
     id: 4,
-    name: 'Шарики, наборы, оформление на выписку',
+    name: 'Оформление на выписку',
     image: require('../images/balloons/На-выписку.png'),
     products: [
       {
@@ -180,7 +180,7 @@ const balloons = [
   },
   {
     id: 6,
-    name: 'Шарики на день рождения',
+    name: 'На день рождения',
     image: require('../images/balloons/На-День-рождения.png'),
     products: [
       {
@@ -320,7 +320,7 @@ const balloons = [
   },
   {
     id: 10,
-    name: 'Шарики на день рождения',
+    name: 'На день рождения',
     image: require('../images/balloons/На-День-рождения.png'),
     products: [
       {
@@ -530,7 +530,7 @@ const balloons = [
   },
   {
     id: 16,
-    name: 'Шарики, наборы, оформление на выписку',
+    name: 'Оформление на выписку',
     image: require('../images/balloons/На-выписку.png'),
     products: [
       {

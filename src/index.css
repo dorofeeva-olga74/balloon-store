@@ -5,7 +5,7 @@ body {
   flex-direction: column;
   justify-content: center;  
   max-width: 1920px;
-  width: 100vw;  
+  width: 100%;  
   margin: 0 auto;
   align-content: center;
   align-items: center;
@@ -15,11 +15,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-@media screen and (max-width: 1919px) {
+/* @media screen and (max-width: 1324px) {
   body {       
-    width: 100%;
+    width: 100vw;
   }
-}
+} */
 /*@media screen and (max-width: 500px) {
   body {       
     align-items:center;
@@ -75,7 +75,7 @@ code {
 @import url(./components//HeaderTablet/HeaderTablet.css);
 /*main*/
 @import url(./components/Main/Main.css);
-@import url(./components/Promo/Promo.css);
+@import url(./components/Home/Home.css);
 @import url(./components/NavBox/NavBox.css);
 @import url(./components/Segment/Segment.css);
 @import url(./components/BalloonCardList/BalloonCardList.css);
@@ -83,6 +83,7 @@ code {
 @import url(./components/BalloonCardAction/BalloonCardAction.css);
 @import url(./components/Discount/Discount.css);
 @import url(./components/OurWorksCard/OurWorksCard.css);
+@import url(./components/Flickity/Flickity.css);
 /*footer*/
 @import url(./components/Footer/Footer.css);
 @import url(./components/CompanyContactInfo/CompanyContactInfo.css);

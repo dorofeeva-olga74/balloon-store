@@ -21,7 +21,7 @@
     font-weight: 700;
     line-height: 52px;
     color:  #000000;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 .segment__nav-box {
     display: flex;
@@ -89,5 +89,10 @@
         font-weight: 700;
         line-height: 23.4px;             
     }    
+}
+@media screen and (max-width:400px) {    
+    .segment {       
+        margin: 0 11px;        
+    }
 }
 

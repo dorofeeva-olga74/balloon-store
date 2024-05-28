@@ -19,7 +19,7 @@ function BalloonCardAction({ name, src, alt, price, productAction }) {
         <span className={'card__product-action'}>{productAction.discount}</span>
       </div>
       <div className={'card__title-section'}>
-        <h3 className={'card__title card__title-product'}>{name}</h3>
+        <h3 className={'card__title-product'}>{name}</h3>
       </div>
     </div>
   );
