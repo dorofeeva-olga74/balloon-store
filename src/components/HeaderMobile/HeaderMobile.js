@@ -8,12 +8,17 @@ import Logo from '../Logo/Logo.js';
 import Rectangle from '../../images/Rectangle.svg';
 import HeaderSection from '../HeaderSection/HeaderSection.js';
 
-function HeaderMobile({ title, to }) {
+function HeaderMobile({ title, to, isOpen, setIsContextBurgerMenuOpened, onClose, onCloseOverlay }) {
   return (
     <>
       <header className='header-mobile'>
         <div className='header-mobile__top'>
-          <BurgerMenu />
+          <BurgerMenu
+            isOpen={isOpen}
+            setIsContextBurgerMenuOpened={setIsContextBurgerMenuOpened}
+            onCloseOverlay={onCloseOverlay}
+            onClose={onClose}
+          />
           <SearchForm
             src={SearchMobile}
             placeholder={'Поиск'}

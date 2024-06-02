@@ -83,7 +83,7 @@ function App() {
       />
       <Main />
       <Footer isFooter={true} />
-      <FooterMobile isFooter={true}/>
+      <FooterMobile isFooter={true} />
     </>
   );
 }

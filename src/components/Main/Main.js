@@ -15,8 +15,7 @@ function Main() {
 
   return (
     <>
-      <main className='main'>
-        ourWorks
+      <main className='main'>      
         <Home />
         <Segment
           subtitle={'Популярные категории'}

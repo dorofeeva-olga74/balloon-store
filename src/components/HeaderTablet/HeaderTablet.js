@@ -12,15 +12,19 @@ import HeaderSectionsBottom from '../HeaderSectionsBottom/HeaderSectionsBottom.j
 import Contacts from '../Contacts/Contacts';
 import Hours from '../Hours/Hours';
 
-function HeaderTablet({ title, to }) {
+function HeaderTablet({ title, to, isOpen, setIsContextBurgerMenuOpened, onClose, onCloseOverlay }) {
   return (
     <>
       <header className='header-tablet'>
         <div className='header-tablet__top'>
-          {/* <BurgerMenu /> */}
           <Logo />
           <div className='header-tablet__catalog-set header-top__catalog-set'>
-            <CatalogBtn />
+            <CatalogBtn
+              isOpen={isOpen}
+              onClose={onClose}
+              onCloseOverlay={onCloseOverlay}
+              setIsContextBurgerMenuOpened={setIsContextBurgerMenuOpened}
+            />
             <SearchForm
               src={SearchMobile}
               placeholder={'Поиск по сайту'}
@@ -45,22 +49,7 @@ function HeaderTablet({ title, to }) {
           </button>
         </div>
         <div className='header-tablet__bottom'>
-          {/* <div className='header-tablet__set'>
-            <img
-              className='header-tablet__rectangle'
-              src={Rectangle}
-              alt='Угол вниз'
-            /> */}
-            {/* <div className='header-mobile__sections'> */}
-              <HeaderSectionsBottom />
-            {/* </div> */}
-            {/* <nav className='sections__nav-box'>
-              <HeaderSection
-                title='Латексные шары'
-                to='/latex-balloons'
-              />
-            </nav>
-          </div> */}
+          <HeaderSectionsBottom />
           <Contacts />
           <Hours />
         </div>

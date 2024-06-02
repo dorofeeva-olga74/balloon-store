@@ -25,13 +25,13 @@
     }  
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 850px) {
     .sections-bootom__nav-box {        
         gap: 20px;
-    }
+    }    
 }
 
-@media screen and (max-width: 565px) {
+@media screen and (max-width: 732px) {
     .sections-bootom__nav-box {        
         gap: 10px;
     }    

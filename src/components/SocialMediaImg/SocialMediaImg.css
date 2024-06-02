@@ -2,8 +2,17 @@
     display: flex;    
     width: 30px;
     height: 30px;
-    color: #000;
+    color: transparent;
     margin: 0 15px 0 0;
+}
+.social-media__nav {
+    background-color: transparent; /* Цвет кнопки по умолчанию */
+    transition: background-color 0.3s; /* Плавное изменение цвета при наведении */
+    border: 2px solid transparent; /* Прозрачная рамка */
+}
+.social-media__nav:hover{
+    opacity: 0.6;    
+    cursor: pointer;    
 }
 .social-media__nav-box {
     width: 100%;
@@ -26,6 +35,9 @@
     .social-media {
         display: none;              
     }
+    .social-media__burger-menu {
+        display: flex;
+    }  
 }
 @media screen and (max-width: 768px) {
     .social-media {
@@ -48,5 +60,9 @@
 @media screen and (max-width: 660px) {
     .social-media {       
         display: none;             
-    }   
+    } 
+    .social-media__burger-menu {
+        display: flex;
+        margin-right: 25px;
+    }     
 }

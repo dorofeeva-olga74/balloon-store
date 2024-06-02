@@ -1,23 +1,45 @@
-import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
-import IconAccount from "../../images/iconAccount.svg";
+import React from 'react';
+// import { NavLink } from 'react-router-dom';
+// import IconAccount from '../../images/iconAccount.svg';
+import HeaderSectionsTop from '../HeaderSectionsTop/HeaderSectionsTop';
+import SocialMediaImg from '../SocialMediaImg/SocialMediaImg';
+import IconsInstagram from '../../images/icons-instagram.svg';
+import IconsWhatsApp from '../../images/icons-whatsapp.svg';
+import IconsVK from '../../images/icons-vk.svg';
 
 function ContextBurgerMenu({ isOpen, onClose, onCloseOverlay }) {
-  const location = useLocation();  
+  // const location = useLocation();
 
   return (
-    <section className={`context-burger-menu ${isOpen ? 'context-burger-menu_opened' : ''}`} onClick={onCloseOverlay}>
-      <div className='context-burger-menu__container' onClick={e => e.stopPropagation()}>
-        <button className='context-burger-menu__close-button' onClick={onClose}></button>
-        <nav className='context-burger-menu__nav'>
-          <NavLink to='/' className={`context-burger-menu__link ${location.pathname === '/' ? 'context-burger-menu__current' : ''}`} onClick={onCloseOverlay}>Главная</NavLink>
-          <NavLink to='/movies' className={`context-burger-menu__link ${location.pathname === '/movies' ? 'context-burger-menu__current' : ''}`} onClick={onCloseOverlay}>Фильмы</NavLink>
-          <NavLink to='/saved-movies' className={`context-burger-menu__link ${location.pathname === '/saved-movies' ? 'context-burger-menu__current' : ''}`} onClick={onCloseOverlay}>Сохранённые фильмы</NavLink>
-        </nav>
-        <div className='context-burger-menu__account-button account context-burger-menu__account' onClick={onCloseOverlay}>
-          <NavLink to='/profile' className='account__title context-burger-menu__account'>Аккаунт
-            <img className='account__icon context-burger-menu__icon context-burger-menu__account' src={IconAccount} alt='Логотип аккаунта' />
-          </NavLink>
+    <section
+      className={`context-burger-menu ${isOpen ? 'context-burger-menu_opened' : ''}`}
+      onClick={onCloseOverlay}>
+      <div
+        className='context-burger-menu__container'
+        onClick={(e) => e.stopPropagation()}>
+        <button
+          className='context-burger-menu__close-button'
+          onClick={onClose}></button>
+        <HeaderSectionsTop isContextMenu={true} />
+        <div className='context-burger-menu__line'></div>
+        <div className='context-burger-menu__contact-set'>
+          <h3 className='context-burger-menu__contact-title'>Телефон</h3>
+          <span className='context-burger-menu__tel-number'>+7 861 204 24 46</span>
+          <h3 className='context-burger-menu__contact-title'>Мы в соц. сетях</h3>
+          <div className='context-burger-menu__social-box'>
+            <SocialMediaImg
+              className='social-media__burger-menu'
+              src={IconsInstagram}
+            />
+            <SocialMediaImg
+              className='social-media__burger-menu'
+              src={IconsWhatsApp}
+            />
+            <SocialMediaImg
+              className='social-media__burger-menu'
+              src={IconsVK}
+            />
+          </div>
         </div>
       </div>
     </section>

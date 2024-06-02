@@ -5,21 +5,24 @@ import HeaderSectionsTop from '../HeaderSectionsTop/HeaderSectionsTop.js';
 import ShoppingCart from '../ShoppingCart/ShoppingCart.js';
 import Search from '../../images/icons-search.svg';
 
-function HeaderTop() {
+function HeaderTop({ onCloseOverlay, isOpen, onClose, setIsContextBurgerMenuOpened }) {
   return (
     <div className='header-top'>
       <Logo />
       <div className='header-top__catalog-set'>
-        <CatalogBtn />
+        <CatalogBtn
+          isOpen={isOpen}
+          onClose={onClose}
+          onCloseOverlay={onCloseOverlay}
+          setIsContextBurgerMenuOpened={setIsContextBurgerMenuOpened}
+        />
         <SearchForm
           src={Search}
           placeholder={'Поиск'}
         />
       </div>
       <HeaderSectionsTop />
-      {/* <button className='header-mobile__button'> */}
       <ShoppingCart />
-      {/* </button> */}
     </div>
   );
 }
