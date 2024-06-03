@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react';
-// import { Routes, Route, useNavigate, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Header from '../Header/Header';
 import HeaderTablet from '../HeaderTablet/HeaderTablet';
 import HeaderMobile from '../HeaderMobile/HeaderMobile';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 import FooterMobile from '../FooterMobile/FooterMobile';
+import Segment from '../Segment/Segment';
+import BalloonCardList from '../BalloonCardList/BalloonCardList';
 
 function App() {
   const [isContextBurgerMenuOpened, setIsContextBurgerMenuOpened] = useState(false);
-  // const [isFooter, setIsFooter] = useState(true);
-  // const { width } = useWindowDimensions(); // Получаем ширину экрана
-  // const isMobile = width < 768; // Условие для мобильных устройств
-  // const isMobile = 'ontouchstart' in window; // Определение типа устройства
-
   // ОБРАБОТЧИК Escape
   // const isSomePopupOpen = isInfoTooltipOpened || isContextBurgerMenuOpened;
   const isSomePopupOpen = isContextBurgerMenuOpened;
@@ -43,26 +40,7 @@ function App() {
   }, [isSomePopupOpen]);
 
   return (
-    // <>
-    //   {isMobile ? (
-    //     // Рендерим HeaderMobile, если ширина экрана соответствует мобильному устройству
-    //     <HeaderMobile
-    //       isOpen={isContextBurgerMenuOpened}
-    //       setIsContextBurgerMenuOpened={setIsContextBurgerMenuOpened}
-    //       onClose={closeAllPopups}
-    //       onCloseOverlay={handleOverlayClick}
-    //     />
-    //   ) : (
-    //     // Рендерим Header для десктопов и планшетов
-    //     <Header
-    //       isOpen={isContextBurgerMenuOpened}
-    //       setIsContextBurgerMenuOpened={setIsContextBurgerMenuOpened}
-    //       onClose={closeAllPopups}
-    //       onCloseOverlay={handleOverlayClick}
-    //     />
-    //   )}
-    // </>
-    <>
+    <div className='app'>
       <HeaderMobile
         isOpen={isContextBurgerMenuOpened}
         setIsContextBurgerMenuOpened={setIsContextBurgerMenuOpened}
@@ -81,10 +59,29 @@ function App() {
         onClose={closeAllPopups}
         onCloseOverlay={handleOverlayClick}
       />
-      <Main />
+      <Routes>
+        <Route
+          path='/'
+          element={<Main />}
+        />
+        <Route
+          path='/categories'
+          element={
+            <>
+              <Segment
+                subtitle={'Все категории'}
+                text={''}
+                to={'/categories'}
+                textPath={'Главная / Категории'}
+              />
+              <BalloonCardList subtitle={'Все категории'} />
+            </>
+          }
+        />
+      </Routes>
       <Footer isFooter={true} />
       <FooterMobile isFooter={true} />
-    </>
+    </div>
   );
 }
 

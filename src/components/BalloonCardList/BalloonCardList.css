@@ -11,6 +11,9 @@
     margin: 0 30px 40px 30px; 
     width: calc(100% - 30px*2);  
 }
+.balloon__card-link {
+    text-decoration: none;
+}
 .balloon__card-list_top-sales {   
     grid-template-columns: repeat(5, minmax(163px, 1fr));   
     gap: 2em;    
@@ -30,7 +33,12 @@
 .balloon__card-list_our-works:last-of-type {
     overflow-x: hidden;
 }
-
+@media screen and (max-width:1130px) {    
+    .balloon__card-list {        
+        margin: 0 15px 40px 15px;
+        width: calc(100% - 15px*2);       
+    }
+}
 @media screen and (max-width:1105px) {    
     .balloon__card-list_top-sales { 
         grid-template-columns: repeat(4, minmax(180px, auto));   
@@ -54,16 +62,14 @@
 }
 @media screen and (max-width:634px) {   
     .balloon__card-list {        
-        margin: 0 20px 30px 20px;
-        width: calc(100% - 20px*2);        
+        margin: 0 15px 30px 15px;
+        width: calc(100% - 15px*2);        
     }    
 }
 
 @media screen and (max-width: 550px) {
     .balloon__card-list {
-        grid-template-columns: repeat(2, minmax(133px, 1fr));        
-        margin: 0 15px 30px 15px; 
-        width: calc(100% - 15px*2);
+        grid-template-columns: repeat(2, minmax(133px, 1fr));       
         gap: 0.7em;       
     } 
     .balloon__card-list_top-sales {        

@@ -15,22 +15,28 @@ function Main() {
 
   return (
     <>
-      <main className='main'>      
+      <main className='main'>
         <Home />
         <Segment
           subtitle={'Популярные категории'}
           text={'смотреть всё'}
+          to={'/categories'}
+          // textPath={''}
         />
         <BalloonCardList subtitle={'Популярные категории'} />
         <Segment
           subtitle={'Лидеры продаж'}
           text={'показать всё'}
+          to={'/categories'}
+          // textPath={''}
         />
         <BalloonCardList subtitle={'Лидеры продаж'} />
         <Discount />
         <Segment
           subtitle={'Акции'}
           text={'показать всё'}
+          to={'/categories'}
+          // textPath={''}
         />
         <BalloonCardList subtitle={'Акции'} />
         <Segment

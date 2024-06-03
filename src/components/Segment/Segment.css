@@ -23,6 +23,18 @@
     color:  #000000;
     letter-spacing: 2px;
 }
+.segment-text-path {
+    display: flex;
+    margin: 0 0 40px 0;
+    padding: 0;
+    align-items: center;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20.8px;
+    color: rgba(0, 0, 0, 1);    
+}
 .segment__nav-box {
     display: flex;
     flex-direction: row;
@@ -52,12 +64,21 @@
     padding: 0;
 }
 
+@media screen and (max-width:1130px) {    
+    .segment {        
+        margin: 0 15px;        
+    }
+}
+
 @media screen and (max-width:768px) {    
     .segment-subtitle {
-        margin: 0 20px 20px 0;    
+        margin: 0 20px 15px 0;    
         font-size: 22px;        
         font-weight: 700;
         line-height: 29.8px;            
+    }
+    .segment-text-path {        
+        margin: 0 0 20px 0;
     }
     .segment__nav-link {
         margin: 0 0 22px 0;       
@@ -68,27 +89,45 @@
 }
 @media screen and (max-width:635px) {    
     .segment {       
-        margin: 0 20px;        
-    }
-}
-@media screen and (max-width:550px) {    
-    .segment {       
         margin: 0 15px;        
     }
-}
-
-@media screen and (max-width:500px) {
     .segment-set {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     .segment-subtitle {
-        margin: 0;        
+        margin: 0 20px 15px 0;  
+    }
+    .segment-text-path {        
+        margin: 0 0 15px 0;
+        justify-content: center; 
+    }
+}
+/* @media screen and (max-width:550px) {    
+    .segment {       
+        margin: 0 15px;        
+    }
+} */
+
+@media screen and (max-width:500px) {
+    /* .segment-set {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } */
+    .segment-subtitle {
+        margin: 0; 
+        margin: 0 0 15px 0;       
         font-size: 18px;        
         font-weight: 700;
         line-height: 23.4px;             
-    }    
+    } 
+    .segment-text-path {        
+        margin: 0 0 15px 0;
+        font-size: 14px;    
+        line-height: 18.2px;        
+    }   
 }
 @media screen and (max-width:400px) {    
     .segment {       

@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import SegmentRectangle from '../../images/segment-rectangle.svg';
 
-function Segment({ subtitle, text }) {
+function Segment({ subtitle, text, to, textPath }) {
   return (
     <section className='segment'>
       <div className='segment-set'>
@@ -10,7 +10,7 @@ function Segment({ subtitle, text }) {
         {text === '' ? null : (
           <nav className='segment__nav-box'>
             <NavLink
-              to='/catalog'
+              to={to}
               className='segment__nav-link'>
               {text}
               <img
@@ -22,6 +22,7 @@ function Segment({ subtitle, text }) {
           </nav>
         )}
       </div>
+      <p className='segment-text-path'>{textPath}</p>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import BalloonCard from '../BalloonCard/BalloonCard';
 import BalloonCardAction from '../BalloonCardAction/BalloonCardAction';
 import balloons from '../../utils/balloons';
@@ -18,7 +19,10 @@ function BalloonCardList({ subtitle }) {
   // Собираем все продукты в один массив
   const allProducts = filteredAndCopiedBalloons.flatMap((balloon) => balloon.products);
 
-  const getTopCategoriesCountOnPage = (screenWidth) => {
+  const getTopCategoriesCountOnPage = (screenWidth, textPath) => {
+    if (textPath) {
+      return '*';
+    }
     if (screenWidth > 768) {
       return 8;
     } else {
@@ -138,7 +142,7 @@ function BalloonCardList({ subtitle }) {
   return (
     <section
       className={`balloon__card-list ${
-        subtitle === 'Лидеры продаж' || subtitle === 'Акции'
+        subtitle === 'Лидеры продаж' || subtitle === 'Акции' || subtitle === 'Все категории'
           ? 'balloon__card-list_top-sales'
           : subtitle === 'Наши работы'
           ? 'balloon__card-list_our-works'
@@ -164,15 +168,18 @@ function BalloonCardList({ subtitle }) {
               alt={balloon.name}
             />
           ))
-        : // : subtitle === 'Наши работы'
-          // ? visibleProducts.map((ourWork) => (
-          //     <OurWorksCard
-          //       key={ourWork.id}
-          //       src={ourWork.image}
-          //       alt={ourWork.name}
-          //     />
-          //   ))
-          null}
+        : subtitle === 'Все категории'
+        ? balloons.map((balloon) => (
+            <Link to={`/product/${balloon.name}`} className='balloon__card-link'>
+              <BalloonCard
+                key={balloon.id}
+                name={balloon.name}
+                src={balloon.image}
+                alt={balloon.name}
+              />
+            </Link>
+          ))
+        : null}
     </section>
   );
 }
